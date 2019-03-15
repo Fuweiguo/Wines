@@ -207,6 +207,7 @@
 	height: auto;
 	float: left;
 	display: block;
+	z-index: auto;
 }
 .h_b_b_title h4{
 	width: 200px;
@@ -221,7 +222,7 @@
 	height: 360px;
 	background: #222;
 	position: absolute;
-	z-index: 1;
+	z-index: 999;
 }
 .h_b_b_t_nav div{
 	width: 200px;
@@ -236,7 +237,7 @@
 	height: 59px;
 	position: absolute;
 	left: 20px;
-	z-index: 1;
+	z-index: 990;
 	background: url(../img/icon_index.png) left -142px;
 }
 .h_b_b_t_nav div .i1{
@@ -278,7 +279,7 @@
 	position: absolute;
 	left: 200px;
 	display: none;
-	z-index: 1;
+	z-index: 990;
 }
 .h_b_b_t_nav .banner_content{
 	width: 780px;

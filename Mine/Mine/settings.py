@@ -44,7 +44,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    # 'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -128,3 +128,18 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'static')
 ]
+
+CACHES = {
+  "default": {
+      "BACKEND": "django_redis.cache.RedisCache",
+      # 配置redis的位置
+      # 配置主机地址、端口号、数据库
+      "LOCATION": "redis://127.0.0.1:6379/0",
+      "OPTIONS": {
+          "CLIENT_CLASS": "django_redis.client.DefaultClient",
+      }
+  }
+}
+
+
+

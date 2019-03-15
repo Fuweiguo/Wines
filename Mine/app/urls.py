@@ -17,9 +17,11 @@ urlpatterns = [
     url(r'^supermarket/$',views.supermarket,name='supermarket'),
 
     #商品详情
-    url(r'^goods/$',views.goods,name='goods'),
+    url(r'^goods/(\d)/$',views.goods,name='goods'),
 
     #购物车
     url(r'^carts/$',views.carts,name='carts'),
+    #加入购物车
+    url(r'^addgoods/(\d)/$',views.addgoods,name='addgoods'),
 
 ]

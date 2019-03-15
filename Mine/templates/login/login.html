@@ -4,11 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <title>登录-中酒网</title>
-    		<link rel="stylesheet" href="{% static 'css/entry.css' %}" />
-    		<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>
-    		<script type="text/javascript" src="{% static 'js/jquery.cookie.js' %}" ></script>
-    		<script type="text/javascript" src="{% static 'js/entry.js' %}" ></script>
-
+    <link rel="stylesheet" href="{% static 'css/entry.css' %}"/>
+    <script src="{% static 'js/ajax.jQuery-1.8.0.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.cookie.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/entry.js' %}"></script>
 </head>
 <body>
 
@@ -30,14 +29,17 @@
         <div class="header_bottom_left"><a href=""></a></div>
         <div class="header_bottom_right">
             <h1></h1>
-            <input type="text" placeholder="邮箱/手机号/用户名" class="inp1">
-            <input type="password" placeholder="请输入密码" class="inp2">
-            <label>
+            <form action="{% url 'app:login' %}" method="post">
+                <input type="text" placeholder="手机号" class="inp1" name="phone" id="phone">
+                <input type="password" placeholder="请输入密码" class="inp2" name="password" id="password">
+                <label>
                 <input type="checkbox" class="inp3">记住用户名
                 <a href="#">忘记密码?</a>
             </label>
-            <button class="bnt1">登录</button>
-            <a href="../register/register.html" class="a">30秒注册&gt;&gt;</a>
+            <button class="bnt1" type="submit">登录</button>
+            <a href="{% url 'app:register' %}" class="a">30秒注册&gt;&gt;</a>
+            </form>
+
             <p class="other">使用合作网站账号登录：</p>
             <p class="other1">
                 <a href="#" class="r_o_1"></a>
@@ -52,7 +54,6 @@
     <p>Copyright © 2016 中酒网(www.zhongjiu.cn) 版权所有 <a href="#">京ICP备12022216号-2</a></p>
     <p>购买前请确认达到法定饮酒年龄！中酒网不销售任何含酒精产品给18岁以下人士！</p>
 </div>
-
 
 
 </body>
