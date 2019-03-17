@@ -9,7 +9,7 @@
     <script src="{% static 'js/ajax.jQuery-1.8.0.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/jquery.cookie.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/shoppingCart.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/head.js' %}"></script>
+    {#    <script type="text/javascript" src="{% static 'js/head.js' %}"></script>#}
 </head>
 <body>
 
@@ -47,7 +47,7 @@
         </ul>
     </div>
     <!--有商品时购物车-->
-    <div class="cart_message1" style="display: none;">
+    <div class="cart_message1">
         <div class="cart_message1_top">
             <ul>
                 <li style="width: 415px;text-align: center;">选购的商品</li>
@@ -57,28 +57,47 @@
                 <li style="width: 120px;text-align: center;">操作</li>
             </ul>
         </div>
-        <div class="cart_message1_content">
-            <ul class="cart_message1_contentUl">
-                <li class="cart_message1_content_li1"><img src="{% static 'img/Cart(1).jpg' %}"><a
-                        href="../goods/goods.html" class="names">43°国窖1573 500ml<em>[特价]</em></a></li>
-                <li class="cart_message1_content_li2">￥739.00</li>
-                <li class="cart_message1_content_li3"><input type="text" value="1"></li>
-                <i class="minus">-</i>
-                <i class="add">+</i>
-                <li class="cart_message1_content_li4">￥739.00</li>
-                <li class="cart_message1_content_li5"><a href="">加入收藏夹</a><br><a href="">删除</a></li>
-            </ul>
-        </div>
+
+        {% for cat in carts %}
+            <div class="cart_message1_content">
+                <ul class="cart_message1_contentUl">
+                    <li class="cart_message1_content_li1">
+                        <img src="/static/img/{{ cat.goods.g_img }}">
+                        <a href="../goods/goods.html" class="names">
+                            {{ cat.goods.g_name }}
+                            <em>[特价]</em>
+                        </a>
+                    </li>
+                    <li class="cart_message1_content_li2">￥{{ cat.goods.g_price }}</li>
+                    <li class="cart_message1_content_li3">
+                        <input type="text" value="{{ cat.c_number }}" class="">
+                    </li>
+                    <i class="minus" cartsid="{{ cat.id }}">-</i>
+                    <i class="add" cartsid="{{ cat.id }}">+</i>
+                    <li class="cart_message1_content_li4">￥00</li>
+                    <li class="cart_message1_content_li5" cartsid="{{ cat.id }}">
+                        <a href="">加入收藏夹</a>
+                        <br><a>删除</a></li>
+                </ul>
+            </div>
+        {% endfor %}
+
+
         <div class="cart_message1_bottom">
-            <button>继续购物</button>
+            <a href="{% url 'app:index' %}"><button>继续购物</button></a>
             <div>
-                <p><em>2</em>件商品 总计金额：<span>￥764.00</span></p>
+                <p>
+                    <em>{{ carts.count }}</em>
+                    件商品 总计金额：
+                    <span id="totals">
+                        ￥00.00
+                    </span></p>
             </div>
         </div>
         <div class="end">
             <ul>
-                <li>应付商品金额（不含运费）：<em>￥764.00</em></li>
-                <li>去结算</li>
+                <li>应付商品金额（不含运费）：<em>￥00.00</em></li>
+                <a href="{% url 'app:createorders' %}"><li>下单</li></a>
             </ul>
         </div>
     </div>
@@ -212,7 +231,6 @@
         </div>
     </div>
 </div>
-
 
 
 </body>

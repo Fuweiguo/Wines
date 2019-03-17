@@ -83,7 +83,7 @@ h1{
 	width: 1000px;
 	height: auto;
 	border: 1px solid #ccc;
-	display: none;
+	/*display: none;*/
 }
 .cart_message1_top{
 	width: 1000px;
@@ -121,6 +121,7 @@ h1{
 .cart_message1_content ul li a{
 	text-decoration: none;
 	color: blue;
+
 }
 .cart_message1_content_li1{
 	width: 375px;
@@ -170,7 +171,7 @@ h1{
 }
 .cart_message1_content ul i{
 	font-style: normal;
-	display: inline-block;
+	/*display: inline-block;*/
 	width: 15px;
 	height: 15px;
 	text-align: center;
@@ -252,7 +253,8 @@ h1{
 	height: 98px;
 	padding-left: 341px;
 	background: url(../img/cart-no-bg.png) no-repeat 250px 22px #F4F4F4;
-	display: block;
+	/*display: block;*/
+	display: none;
 }
 .cart_message ul{
 	width: 675px;
@@ -299,7 +301,7 @@ h1{
 .sp_scclearfid ul li{
 	float: left;
 	width: 162px;
-	height: 220;
+	height: 220px;
 	margin: 0 0 10px 28px;
 	list-style-type: none;
 	cursor: pointer;

@@ -69,9 +69,11 @@
             </div>
             <!--购物车-->
             <div class="h_b_t_right">
-                <p>我的购物车</p>
-                <img src="{% static 'img/icon_index_05.jpg' %}">
-                <div class="num">0</div>
+                <a href="{% url 'app:carts' %}">
+                    <p>我的购物车</p>
+                    <img src="{% static 'img/icon_index_05.jpg' %}">
+                    <div class="num">0</div>
+                </a>
             </div>
             <div class="number"><img src="{% static 'img/icon_index_06.jpg' %}">购物车中还没有商品，赶紧选购吧！</div>
         </div>
@@ -502,7 +504,7 @@
                 <!--商品数量增减按钮-->
                 {% if num %}
                     <div class="c_i_c_b_left">
-                        <i class="num" id="num">{{ num }}</i>
+                        <i class="num" id="num">1</i>
                         <a class="add">+</a>
                         <a class="minus">-</a>
                     </div>
@@ -515,11 +517,11 @@
                 {% else %}
                     <div class="c_i_c_b_left">
                         {% if user %}
-                            <i class="num" id="num" >{{ num }}</i>
+                            <i class="num" id="num" >1</i>
                             <a class="add">+</a>
                             <a class="minus" >-</a>
                         {% else %}
-                            <i class="num" id="num">{{ num | default:'' }}</i>
+                            <i class="num" id="num">1</i>
                             <a class="add">+</a>
                             <a class="minus">-</a>
                         {% endif %}
