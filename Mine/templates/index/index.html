@@ -36,6 +36,7 @@
                     {% if user %}
                          <li style="background: url(/static/img/icon_index_02.jpg) no-repeat 5px 8px;padding-right: 5px;"
                         url="/static/undefined"><a href="#">{{ user.name }}</a></li>
+                        <li><a href="{% url 'app:logout' %}">退出登录</a></li>
                     {% else %}
                          <li class="h_c_t_leftUl1" url="{% url 'app:login' %}"><a href="{% url 'app:login' %}">请登录</a></li>
                     <li class="h_c_t_leftUl2" url="{% url 'app:register' %}"><a href="{% url 'app:register' %}" style="color: darkred;">注册</a></li>

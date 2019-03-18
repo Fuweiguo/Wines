@@ -1,16 +1,24 @@
 import hashlib
 import random
-
+import io
 import time
+from urllib.parse import parse_qs
+
+import os
+from PIL import Image, ImageDraw, ImageFont
 
 from django.core.cache import cache
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse
 from django.shortcuts import render, redirect
 
 # Create your views here.
 
 
 # 主页
+from django.views.decorators.csrf import csrf_exempt
+
+from Mine.settings import BASE_DIR
+from app.alipay import alipay
 from app.models import *
 
 
@@ -25,7 +33,6 @@ def index(request):
         user = Users.objects.get(phone=phone)
 
     return render(request, 'index/index.html', context={'user': user, 'goods': goods})
-
 
 # 登录
 def login(request):
@@ -66,6 +73,22 @@ def password_md5(src):
     password = md5.hexdigest()
     return password
 
+#验证是否已被注册
+def is_register(request):
+    phone = request.GET.get('phone')
+    user = Users.objects.filter(phone=phone)
+    if user:
+        response_data = {
+            'msg': 1,
+            'status':'该号码已被注册'
+        }
+    else:
+        response_data = {
+            'msg': 0,
+            'status':''
+        }
+    return JsonResponse(response_data)
+
 
 # 注册
 def register(request):
@@ -87,10 +110,63 @@ def register(request):
 
         return redirect('app:index')
 
+def verifyconde(request):
+    #定义图片大小
+    width = 110
+    height = 38
+
+    #定义图片颜色
+    bgcolor = (random.randrange(0,256),random.randrange(0,256),random.randrange(0,256))
+
+    image = Image.new('RGB',(width,height),bgcolor)
+
+    draw = ImageDraw.Draw(image)
+
+    for a in range(0,500):
+        xy =(random.randrange(0,width),random.randrange(0,height))
+        fill = (random.randrange(0,256),random.randrange(0,256),random.randrange(0,256))
+        draw.point(xy=xy,fill=fill)
+
+    #随机生成（验证码）
+    temp = '121234567890poiuytrewlkjhgfdsamnbvcxzQWERTYUIOJHGFDSXCVBNM'
+    random_str = ''
+    for i in range(0,4):
+        random_str += temp[random.randrange(0,len(temp))]
+
+    cache.set('random_str',random_str,60)
+
+    #字体类型
+    fontPath = os.path.join(BASE_DIR,'app/fonts/Fangsong.ttf')
+    font = ImageFont.truetype(fontPath,25)
+
+    #字体颜色
+    font_color_1 = (random.randrange(0,156),random.randrange(0,156),random.randrange(0,156))
+    font_color_2 = (random.randrange(0, 156), random.randrange(0, 156), random.randrange(0, 156))
+    font_color_3 = (random.randrange(0, 156), random.randrange(0, 156), random.randrange(0, 156))
+    font_color_4 = (random.randrange(0, 156), random.randrange(0, 156), random.randrange(0, 156))
+
+    #绘制
+    draw.text((10,5),random_str[0], fill=font_color_1,font=font)
+    draw.text((35, 5), random_str[1], fill=font_color_2, font=font)
+    draw.text((60, 5), random_str[2], fill=font_color_3, font=font)
+    draw.text((85, 5), random_str[3], fill=font_color_4, font=font)
+
+    del draw
+
+    buff = io.BytesIO()
+    image.save(buff,'png')
+
+    return HttpResponse(buff.getvalue(),'image/png')
+
+
+
+
 
 # 退出
 def logout(request):
-    return render(request, 'index/index.html')
+    del request.session['phone']
+    cache.clear()
+    return redirect('app:index')
 
 
 # 超市
@@ -111,7 +187,7 @@ def goods(request, gid):
         user = Users.objects.get(phone=phone)
         print(user.phone)
         try:
-            carts = Carts.objects.filter(user=user).filter(goods=good)
+            carts = Carts.objects.filter(user=user).filter(goods=good).exclude(c_delete=True)
             carts = carts.last()
             num = carts.c_number
             print('由用户，有购物车，有商品')
@@ -254,7 +330,7 @@ def remove_carts_goods(request):
     return JsonResponse(response_data)
 
 def random_orders():
-    orders = random.random
+    orders = time.time()
     return orders
 
 #生成订单
@@ -276,6 +352,7 @@ def createorders(request):
         ordersdetail.goods = Goods.objects.get(pk=cart.goods_id)
         ordersdetail.num = cart.c_number
         ordersdetail.save()
+
         # cart.c_delete = True
         cart.save()
 
@@ -291,15 +368,28 @@ def createorders(request):
 
 # 订单列表
 def orders(request):
-    return render(request, 'orders/order.html')
+    token = request.session.get('token')
+    phone = cache.get(token)
+    user = Users.objects.get(phone=phone)
+
+    orders = user.orders_set.all()
+
+    return render(request, 'orders/order.html',context={'orders':orders})
 
 #查看订单
-def ordersdetail(request):
+def ordersdetail(request,id):
+    orders = Orders.my_objects.get(pk=id)
+    orderslist = orders.orderdetail_set.all()
+
+    data = {
+        'orderslist': orderslist,
+        'order': orders,
+    }
+
+    return render(request, 'orders/ordersdetail.html',context=data)
 
 
-    return render(request, 'orders/ordersdetail.html')
-
-
+#删除订单商品
 def remove_orders_goods(request):
     ordersdetail_id = int(request.GET.get('ordersdetail_id'))
     print(ordersdetail_id)
@@ -312,3 +402,103 @@ def remove_orders_goods(request):
         'isdelete':ordersdetail.isdelete
     }
     return JsonResponse(response_data)
+
+#删除订单
+def remove_orders(request):
+    orders_id = request.GET.get('orders_id')
+    orders = Orders.my_objects.get(pk=orders_id)
+    orders.isdelete = True
+    orders.save()
+    response_data = {
+        'status': 0,
+    }
+    return JsonResponse(response_data)
+
+
+def randomtest(request):
+    temp = random.randrange(100,10000)
+    return render(request,'other/randomtest.html',context={'temp':temp})
+
+
+def returnurl(request):
+    return render(request,'index/index.html')
+
+
+def appnotifyurl(request):
+    print('支付成功')
+    return JsonResponse({'msg':'success'})
+
+
+@csrf_exempt
+def appontifyurl(request):
+    if request.method == 'POST':
+        #获取到参数
+        body_str = request.body.decode('utf-8')
+
+        #通过parse_qs
+        post_data = parse_qs(body_str)
+
+        #转化为字典
+        post_dic = {}
+        for k,v in post_data.items():
+            post_dic[k] = v[0]
+
+        #获取订单号
+        out_trade_no = post_dic['out_trade_no']
+
+        #跟新状态
+        Orders.objects.filter(number=out_trade_no).update(status=1)
+
+
+    return JsonResponse({'msg': 'success'})
+
+
+
+def pay(request):
+    # print(request.GET.get('orderid'))
+
+    orders_number = request.GET.get('orders_number')
+    order = Orders.my_objects.get(number=orders_number)
+
+    sum = 0
+    for orderGoods in order.orderdetail_set.all():
+        sum += orderGoods.goods.g_price * orderGoods.num
+
+    # 支付地址信息
+    data = alipay.direct_pay(
+        subject='MackBookPro [256G 8G 灰色]', # 显示标题
+        out_trade_no=order.number,    # 爱鲜蜂 订单号
+        total_amount=str(sum),   # 支付金额
+        return_url='http://47.92.149.204/returnurl/'
+    )
+
+
+    # 支付地址
+    alipay_url = 'https://openapi.alipaydev.com/gateway.do?{data}'.format(data=data)
+
+    response_data = {
+        'msg': '调用支付接口',
+        'alipayurl': alipay_url,
+        'status': 1
+    }
+
+    return JsonResponse(response_data)
+
+
+def code(request):
+    random_str = cache.get('random_str').lower()
+    code = request.GET.get('code').lower()
+    print(random_str,code)
+    if code == random_str:
+        #验证成功
+        resqponse_data = {
+            'msg':1,
+            'status':'验证成功'
+        }
+    else:
+        # 验证错误
+        resqponse_data = {
+            'msg': 0,
+            'status':'验证失败'
+        }
+    return JsonResponse(resqponse_data)

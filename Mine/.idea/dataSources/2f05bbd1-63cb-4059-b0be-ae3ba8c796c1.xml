@@ -1668,67 +1668,73 @@ model</ColNames>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="384" parent="267" name="orders_user_id_7e2523fb_fk_user_id">
+    <column id="384" parent="267" name="isdelete">
+      <Position>7</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="385" parent="267" name="orders_user_id_7e2523fb_fk_user_id">
       <ColNames>user_id</ColNames>
     </index>
-    <key id="385" parent="267" name="PRIMARY">
+    <key id="386" parent="267" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="386" parent="267" name="orders_user_id_7e2523fb_fk_user_id">
+    <foreign-key id="387" parent="267" name="orders_user_id_7e2523fb_fk_user_id">
       <ColNames>user_id</ColNames>
       <RefSchemaName>Mine</RefSchemaName>
       <RefTableName>user</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="387" parent="268" name="id">
+    <column id="388" parent="268" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="388" parent="268" name="name">
+    <column id="389" parent="268" name="name">
       <Position>2</Position>
       <DataType>varchar(40)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="389" parent="268" name="phone">
+    <column id="390" parent="268" name="phone">
       <Position>3</Position>
       <DataType>varchar(20)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="390" parent="268" name="password">
+    <column id="391" parent="268" name="password">
       <Position>4</Position>
       <DataType>varchar(40)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="391" parent="268" name="createtime">
+    <column id="392" parent="268" name="createtime">
       <Position>5</Position>
       <DataType>datetime(6)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="392" parent="268" name="user_img">
+    <column id="393" parent="268" name="user_img">
       <Position>6</Position>
       <DataType>varchar(100)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="393" parent="268" name="phone">
+    <index id="394" parent="268" name="phone">
       <ColNames>phone</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="394" parent="268" name="PRIMARY">
+    <key id="395" parent="268" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="395" parent="268" name="phone">
+    <key id="396" parent="268" name="phone">
       <ColNames>phone</ColNames>
       <UnderlyingIndexName>phone</UnderlyingIndexName>
     </key>

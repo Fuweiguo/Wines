@@ -14,7 +14,6 @@ $(function () {
         })
         $('#totals').html('￥' + $totals.toFixed(2))
         $('.end > ul>li>em').html('￥' + $totals.toFixed(2))
-        console.log($totals, $('#totals'))
     }
 
 
@@ -23,7 +22,6 @@ $(function () {
         var $cartsid = parseInt($(this).attr('cartsid'))
         var $num = parseInt($(this).prev().children().val())
         var $this = $(this)
-        console.log($cartsid, '数量', $num)
         reques_data = {
             'cartsid': $cartsid,
             'num': $num
@@ -35,8 +33,6 @@ $(function () {
                 total()
                 $('.cart_message1_bottom > div em').html(response_data.counts)
                 if (response_data.counts == 0 || response_data.counts == '0') {
-                    console.log('减　进了')
-
                     $($this).parent().parent().hide()
                     total()
                     isnot()
@@ -58,7 +54,6 @@ $(function () {
     $('.add').click(function () {
         var $cartsid = parseInt($(this).attr('cartsid'))
         var $this = $(this)
-        console.log($cartsid)
         reques_data = {
             'cartsid': $cartsid
         }
@@ -75,16 +70,14 @@ $(function () {
     $('.cart_message1_content_li5').click(function () {
         var $cartsid = parseInt($(this).attr('cartsid'))
         var $this = $(this)
-        console.log($cartsid)
         reques_data = {
             'cartsid': $cartsid
         }
         $.get('/remove_carts_goods/', reques_data, function (response_data) {
-            console.log('counts',typeof(response_data.counts))
+            console.log(response_data)
             if (response_data.counts == 0 || response_data.counts == '0') {
                 $($this).parent().parent().hide()
                 total()
-                console.log('进了')
                 isnot()
             }
             $('.cart_message1_bottom > div em').html(response_data.counts)

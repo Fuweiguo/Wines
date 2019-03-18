@@ -41,7 +41,6 @@ $(function(){
 		var top = $(window).scrollTop();
 		var timer = setInterval(function(){
 			top -= 300;
-			console.log(top)
 			if(top <= 0)
 			{
 				top = 0;

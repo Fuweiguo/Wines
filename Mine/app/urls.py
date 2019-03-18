@@ -10,6 +10,11 @@ urlpatterns = [
     # 注册
     url(r'^register/$', views.register, name='register'),
 
+    #验证功能
+    url(r'^code/$',views.code,name='code'),
+    #验证是否已被注册
+    url(r'^is_register/$',views.is_register,name='is_register'),
+
     # 退出
     url(r'^logout/$', views.logout, name='logout'),
 
@@ -34,15 +39,27 @@ urlpatterns = [
     url(r'^remove_carts_goods/$', views.remove_carts_goods, name='remove_carts_goods'),
 
     # 生成订单
-    url(r'^createorders/$',views.createorders,name='createorders'),
+    url(r'^createorders/$', views.createorders, name='createorders'),
 
-    #订单列表
+    # 订单列表
     url(r'^orders/$', views.orders, name='orders'),
 
-    #订单详情
-    url(r'^ordersdetail/$',views.ordersdetail,name='ordersdetail'),
+    # 逻辑删除订单
+    url(r'^remove_orders/$', views.remove_orders, name='remove_orders'),
 
-    #删除订单
-    url(r'^remove_orders_goods/$',views.remove_orders_goods,name='remove_orders_goods'),
+    # 订单详情
+    url(r'^ordersdetail/(\d+)/$', views.ordersdetail, name='ordersdetail'),
 
+    # 逻辑删除订单商品
+    url(r'^remove_orders_goods/$', views.remove_orders_goods, name='remove_orders_goods'),
+
+    url(r'^randomtest/$', views.randomtest, name='randomtest'),  # 测试接口
+
+    url(r'^returnurl/$', views.returnurl, name='returnurl'),  # 支付成功后，客户端的显示
+    url(r'^appnotifyurl/$', views.appnotifyurl, name='appnotifyurl'),  # 支付成功后，订单的处理
+    #
+    url(r'^pay/$', views.pay, name='pay'),  # 支付
+
+    # 生成验证码
+    url(r'^verifyconde/$',views.verifyconde,name='verifyconde'),
 ]

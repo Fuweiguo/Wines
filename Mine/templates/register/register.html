@@ -36,10 +36,11 @@
                 <input type="text" placeholder="请输入用户名" class="inp1 isregise" name="name" id="name" isrester="false"/>
                 <i style="color: red">请输入正确的手机号</i>
                 <input type="text" placeholder="请输入手机号" class="inp1 isregise" name="phone" id="phone"/>
-                <i style="color: red">验证码错误</i><br>
-                <input type="text" placeholder="请输入验证码" class="inp2" name="seccode" id="seccord"/>
-                <button class="identifyingCode">&nbsp;</button>
-                <span>看不清？换一张</span>
+                <i style="color: red">验证码错误</i>
+                <input type="text" placeholder="请输入验证码" class="inp2 isregise" name="seccode" id="code"/>
+                <button class="identifyingCode"><img src="{% url 'app:verifyconde' %}" alt=""></button>
+
+                <span class="invisibility">看不清？换一张</span>
                 <i style="color: red">密码不规范</i>
                 <input type="password" placeholder="必须包含大小写数字，６－１６位" class="inp4 isregise" name="password" id="password" isrester="false"/>
                 <i style="color: red">密码不一致</i>

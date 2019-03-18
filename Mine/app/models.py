@@ -29,6 +29,10 @@ class CartsManage(Manager):
     def all(self):
         return super().all().exclude(c_delete=True)
 
+class OrderdetailManager(Manager):
+    def all(self):
+        return super().all().exclude(isdelete=True)
+
 
 class Carts(models.Model):
     user = models.ForeignKey(Users)
@@ -40,6 +44,7 @@ class Carts(models.Model):
 
     class Meta:
         db_table = 'carts'
+
 
 
 class Orders(models.Model):
@@ -56,14 +61,12 @@ class Orders(models.Model):
     # 3 已收货，待评价
     # 4 已评价
     status = models.IntegerField(default=0)
+    isdelete = models.BooleanField(default=False)
+    my_objects = OrderdetailManager()
 
     class Meta:
         db_table = 'orders'
 
-
-class OrderdetailManager(Manager):
-    def all(self):
-        return super().all().exclude(isdelete=True)
 
 class Orderdetail(models.Model):
     #订单

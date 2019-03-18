@@ -103,7 +103,6 @@ $(function () {
                 $.get($goods,reques_data ,function (response) {
                     $('#num').html(0)
                     // sta 1 购物车中有该商品　\\ 0购物车中没该商品
-                    console.log(response )
                 })
             }
         } else {
@@ -123,7 +122,6 @@ $(function () {
 
 
     $('.c_i_c_b_left > a:last').click(function () {
-        console.log('ssssss')
         var $num = parseInt($('#num').html())
         if ($num == 0) {
             $('#num').html($num)

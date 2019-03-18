@@ -4,23 +4,34 @@ $(function () {
         if (!(lent >= 3 && lent <= 6)) {
             $(this).prev().show()
             $(this).removeAttr('isrester')
-            $(this).attr('isrester','false')
+            $(this).attr('isrester', 'false')
         } else {
             $(this).prev().hide()
             $(this).removeAttr('isrester')
-            $(this).attr('isrester','true')
+            $(this).attr('isrester', 'true')
         }
     })
     $('#phone').blur(function () {
         var phone = $(this).val()
+        var $this = $(this)
         if (!(/^1[34578]\d{9}$/.test(phone))) {
             $(this).prev().show()
             $(this).removeAttr('isrester')
-            $(this).attr('isrester','false')
+            $(this).attr('isrester', 'false')
         } else {
             $(this).prev().hide()
             $(this).removeAttr('isrester')
-            $(this).attr('isrester','true')
+            $(this).attr('isrester', 'true')
+            requet_data = {
+                'phone': phone
+            }
+            $.get('/is_register/', requet_data, function (response) {
+                if (response.msg == 1) {
+                    $this.prev().html(response.status)
+                    $this.prev().show()
+                }
+
+            })
         }
     })
 
@@ -29,11 +40,11 @@ $(function () {
         if (!(/^[a-zA-Z0-9_-]{4,16}$/.test(password))) {
             $(this).prev().show()
             $(this).removeAttr('isrester')
-            $(this).attr('isrester','false')
+            $(this).attr('isrester', 'false')
         } else {
             $(this).prev().hide()
             $(this).removeAttr('isrester')
-            $(this).attr('isrester','true')
+            $(this).attr('isrester', 'true')
         }
     })
 
@@ -43,33 +54,50 @@ $(function () {
         if (password != passwordtwo) {
             $(this).prev().show()
             $(this).removeAttr('isrester')
-            $(this).attr('isrester','false')
+            $(this).attr('isrester', 'false')
         } else {
             $(this).prev().hide()
             $(this).removeAttr('isrester')
-            $(this).attr('isrester','true')
+            $(this).attr('isrester', 'true')
         }
+    })
+
+    //验证码
+    $('#code').blur(function () {
+        $this = $(this)
+        reques_data = {
+            'code': $this.val()
+        }
+        $.get('/code/', reques_data, function (response) {
+            console.log(response)
+            //验证失败
+            if (response.msg == 0) {
+                $this.prev().show()
+                $this.removeAttr('isrester')
+                $this.attr('isrester', 'false')
+            } else {
+                $this.prev().hide()
+                $this.removeAttr('isrester')
+                $this.attr('isrester', 'true')
+            }
+        })
     })
 
     $('#registe').click(function () {
         var isregister = 'true'
         $('.isregise').each(function () {
             var aa = $(this).attr('isrester')
-            console.log( aa,$(this).attr('name'))
+            console.log(aa, $(this).attr('name'))
             if (aa == 'false') {
-                console.log('丑ｓｓｓｓ')
                 isregister = 'false'
             }
         })
         console.log('yyyyyyy')
-        if(isregister=='false'){
+        if (isregister == 'false') {
             $(this).prev().prev().show()
-            console.log('1111yyyy')
-        }else {
+        } else {
             $('form').submit()
-            console.log('22222yy')
         }
-
     })
 
 })
