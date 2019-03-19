@@ -32,7 +32,7 @@
                 <ul>
                     <li url="/static/undefined"><a href="#">中国酒业</a></li>
                     <li url="/static/undefined">Hi,欢迎来到中酒</li>
-                   
+
                     {% if user %}
                          <li style="background: url(/static/img/icon_index_02.jpg) no-repeat 5px 8px;padding-right: 5px;"
                         url="/static/undefined"><a href="#">{{ user.name }}</a></li>
@@ -40,14 +40,14 @@
                     {% else %}
                          <li class="h_c_t_leftUl1" url="{% url 'app:login' %}"><a href="{% url 'app:login' %}">请登录</a></li>
                     <li class="h_c_t_leftUl2" url="{% url 'app:register' %}"><a href="{% url 'app:register' %}" style="color: darkred;">注册</a></li>
-                        
+
                     {% endif %}
                 </ul>
             </div>
             <div class="h_c_n_right">
                 <ul>
                     <li style="background: url(/static/img/icon_index_02.jpg) no-repeat 5px 8px;padding-right: 5px;"
-                        url="/static/undefined"><a href="#">我的中酒</a></li>
+                        url="/static/undefined"><a href="{% url 'app:orders' %}">我的订单</a></li>
                     <li style="background: url(/static/img/icon_index_03.jpg) no-repeat 5px 8px;"
                         url="/static/undefined"><a href="#">手机版</a></li>
                     <li url="/static/undefined"><a href="#">帮助中心</a></li>
@@ -83,10 +83,13 @@
             </div>
             <!--购物车-->
             <div class="h_b_t_right">
-                <p><a href="{% url 'app:carts' %}"></a></p>
-                <img src="{% static 'img/icon_index_05.jpg' %}" srt="/static/undefined">
-                <div class="num">0</div>
+                <a href="{% url 'app:carts' %}">
+                    <p>我的购物车</p>
+                    <img src="{% static 'img/icon_index_05.jpg' %}">
+                    <div class="num">{{ num }}</div>
+                </a>
             </div>
+
             <div class="number"><img src="{% static 'img/icon_index_06.jpg' %}" srt="/static/undefined">购物车中还没有商品，赶紧选购吧！
             </div>
             <div class="h_b_t_bottom"></div>

@@ -69,7 +69,6 @@ $(function () {
             'code': $this.val()
         }
         $.get('/code/', reques_data, function (response) {
-            console.log(response)
             //验证失败
             if (response.msg == 0) {
                 $this.prev().show()
@@ -83,16 +82,33 @@ $(function () {
         })
     })
 
+    //刷新验证码
+    $('.invisibility').click(function () {
+        var name = $('#name').val()
+        var phone = $('#phone').val()
+        var password = $('#password').val()
+
+        request_data = {
+            'name':name,
+            'phone':phone,
+            'password':password
+        }
+        $.get('/update_data/',request_data,function (response) {
+            window.location.reload()
+            $('#name').val(response.u_name)
+            $('#phone').val(response.u_phone)
+            $('#password').val(response.u_password)
+        })
+    })
+
     $('#registe').click(function () {
         var isregister = 'true'
         $('.isregise').each(function () {
             var aa = $(this).attr('isrester')
-            console.log(aa, $(this).attr('name'))
             if (aa == 'false') {
                 isregister = 'false'
             }
         })
-        console.log('yyyyyyy')
         if (isregister == 'false') {
             $(this).prev().prev().show()
         } else {

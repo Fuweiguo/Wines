@@ -14,14 +14,14 @@ from django.shortcuts import render, redirect
 # Create your views here.
 
 
-# 主页
+
 from django.views.decorators.csrf import csrf_exempt
 
 from Mine.settings import BASE_DIR
 from app.alipay import alipay
 from app.models import *
 
-
+#主页
 def index(request):
     token = request.session.get('token')
     phone = cache.get(token)
@@ -29,10 +29,12 @@ def index(request):
     goods = Goods.objects.all()
 
     user = None
+    num = 0
     if phone:
         user = Users.objects.get(phone=phone)
+        num = user.carts_set.all().count()
 
-    return render(request, 'index/index.html', context={'user': user, 'goods': goods})
+    return render(request, 'index/index.html', context={'user': user, 'goods': goods,'num':num})
 
 # 登录
 def login(request):
@@ -122,10 +124,17 @@ def verifyconde(request):
 
     draw = ImageDraw.Draw(image)
 
-    for a in range(0,500):
+    for a in range(0,50):
         xy =(random.randrange(0,width),random.randrange(0,height))
         fill = (random.randrange(0,256),random.randrange(0,256),random.randrange(0,256))
         draw.point(xy=xy,fill=fill)
+
+    for i in range(5):
+        x1 = random.randint(0, width)
+        x2 = random.randint(0, width)
+        y1 = random.randint(0, height)
+        y2 = random.randint(0, height)
+        draw.line((x1, y1, x2, y2), fill=(random.randrange(0,256),random.randrange(0,256),random.randrange(0,256)))
 
     #随机生成（验证码）
     temp = '121234567890poiuytrewlkjhgfdsamnbvcxzQWERTYUIOJHGFDSXCVBNM'
@@ -151,6 +160,7 @@ def verifyconde(request):
     draw.text((60, 5), random_str[2], fill=font_color_3, font=font)
     draw.text((85, 5), random_str[3], fill=font_color_4, font=font)
 
+
     del draw
 
     buff = io.BytesIO()
@@ -158,13 +168,24 @@ def verifyconde(request):
 
     return HttpResponse(buff.getvalue(),'image/png')
 
+def update_code(request):
+    name = request.GET.get('name')
+    phone = request.GET.get('phone')
+    password = request.GET.get('password')
+    print(name,phone,password)
 
-
+    response_data = {
+        'msg':1,
+        'u__name':name,
+        'u_phone':phone,
+        'u_passwrod':password,
+    }
+    return JsonResponse(response_data)
 
 
 # 退出
 def logout(request):
-    del request.session['phone']
+    del request.session['token']
     cache.clear()
     return redirect('app:index')
 
@@ -183,9 +204,11 @@ def goods(request, gid):
     print('goods', good, token, phone)
     num = None
     user = None
+    carts_num = 0
     if phone:
         user = Users.objects.get(phone=phone)
         print(user.phone)
+        carts_num = user.carts_set.all().count()
         try:
             carts = Carts.objects.filter(user=user).filter(goods=good).exclude(c_delete=True)
             carts = carts.last()
@@ -196,7 +219,8 @@ def goods(request, gid):
     temp = {
         'goods': good,
         'user': user,
-        'num': num
+        'num': num,
+        'carts_num':carts_num,
     }
 
     return render(request, 'goods/goods.html', context=temp)
@@ -207,6 +231,7 @@ def carts(request):
     token = request.session.get('token')
     phone = cache.get(token)
     carts = None
+    user = None
     num = 0
     if phone:
         user = Users.objects.get(phone=phone)
@@ -215,6 +240,7 @@ def carts(request):
     response_data = {
         'carts': carts,
         'num': num,
+        'user':user
 
     }
     print(response_data)
@@ -227,7 +253,7 @@ def addgoods(request, goodsid):
     token = request.session.get('token')
     phone = cache.get(token)
     user = Users.objects.get(phone=phone)
-    print(user.phone, goods.id)
+    carts_num = user.carts_set.all().count()
 
     num = int(request.GET.get('num'))
 
@@ -237,13 +263,18 @@ def addgoods(request, goodsid):
         if carts.c_delete:
             carts.c_delete = False
             carts.c_number = num
+            carts.save()
+            carts_num = user.carts_set.all().count()
         else:
             carts.c_number = carts.c_number + num
-        carts.save()
+            carts_num = user.carts_set.all().count()
+            carts.save()
+
         num = carts.c_number
         response_data = {
             'sta': 1,
             'num': num,
+            'carts_num':carts_num
         }
     except:
         cart = Carts()
@@ -256,6 +287,7 @@ def addgoods(request, goodsid):
         response_data = {
             'sta': 0,
             'num': num,
+            'carts_num':carts_num
         }
 
     return JsonResponse(response_data)
@@ -337,44 +369,49 @@ def random_orders():
 def createorders(request):
     token = request.session.get('token')
     phone = cache.get(token)
-    user = Users.objects.get(phone=phone)
+    if phone:
 
-    orders = Orders()
-    orders.number =random_orders()
-    orders.user = user
-    orders.save()
+        user = Users.objects.get(phone=phone)
+
+        orders = Orders()
+        orders.number =random_orders()
+        orders.user = user
+        orders.save()
 
 
-    cartslist = user.carts_set.all()
-    for cart in cartslist:
-        ordersdetail=Orderdetail()
-        ordersdetail.orders = orders
-        ordersdetail.goods = Goods.objects.get(pk=cart.goods_id)
-        ordersdetail.num = cart.c_number
-        ordersdetail.save()
+        cartslist = user.carts_set.all()
+        for cart in cartslist:
+            ordersdetail=Orderdetail()
+            ordersdetail.orders = orders
+            ordersdetail.goods = Goods.objects.get(pk=cart.goods_id)
+            ordersdetail.num = cart.c_number
+            ordersdetail.save()
 
-        # cart.c_delete = True
-        cart.save()
+            cart.c_delete = True
+            cart.save()
 
-    orderslist = orders.orderdetail_set.all().exclude(isdelete=True)
-    print(orders.status,type(orders.status))
+        orderslist = orders.orderdetail_set.all().exclude(isdelete=True)
+        print(orders.status,type(orders.status))
 
-    response_data = {
-        'orderslist': orderslist,
-        'order': orders,
-    }
+        response_data = {
+            'orderslist': orderslist,
+            'order': orders,
+        }
 
-    return render(request,'orders/ordersdetail.html',response_data)
-
+        return render(request,'orders/ordersdetail.html',response_data)
+    else:
+        return redirect('app:carts')
 # 订单列表
 def orders(request):
     token = request.session.get('token')
     phone = cache.get(token)
-    user = Users.objects.get(phone=phone)
+    orders = None
+    if phone:
+        user = Users.objects.get(phone=phone)
+        orders = user.orders_set.all()
+    return render(request, 'orders/order.html', context={'orders': orders})
 
-    orders = user.orders_set.all()
 
-    return render(request, 'orders/order.html',context={'orders':orders})
 
 #查看订单
 def ordersdetail(request,id):
@@ -421,7 +458,8 @@ def randomtest(request):
 
 
 def returnurl(request):
-    return render(request,'index/index.html')
+    # return render(request,'index/index.html')
+    return redirect('app:index')
 
 
 def appnotifyurl(request):
@@ -447,7 +485,11 @@ def appontifyurl(request):
         out_trade_no = post_dic['out_trade_no']
 
         #跟新状态
-        Orders.objects.filter(number=out_trade_no).update(status=1)
+        orders = Orders.objects.filter(number=out_trade_no)
+        orders = orders.last()
+        orders.status = 1
+        orders.save()
+
 
 
     return JsonResponse({'msg': 'success'})
@@ -502,3 +544,5 @@ def code(request):
             'status':'验证失败'
         }
     return JsonResponse(resqponse_data)
+
+

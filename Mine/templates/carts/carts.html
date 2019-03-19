@@ -21,7 +21,16 @@
             <li><a href="../index/index.html">中酒网</a></li>
         </ul>
         <ul>
-            <li><a href="../login/login.html">[登录]</a> <a href="../register/register.html">[免费注册]</a></li>
+
+            {% if user %}
+                <li><img src="/static/img/icon_index_02.jpg" alt=""><a href="#">{{ user.name }}</a></li>
+                <li><a href="{% url 'app:logout' %}">退出登录</a></li>
+            {% else %}
+                <li class="h_c_t_leftUl1" url="{% url 'app:login' %}"><a href="{% url 'app:login' %}">请登录</a>
+                </li>
+                <li class="h_c_t_leftUl2" url="{% url 'app:register' %}"><a href="{% url 'app:register' %}"
+                                                                            style="color: darkred;">注册</a></li>
+            {% endif %}
             <li>投诉直达</li>
             <li><a href="">网站导航</a></li>
             <li>订单热线：<span>400-798-9999</span></li>
@@ -38,68 +47,78 @@
     <h1>我的购物车</h1>
     <div class="CartContent_content"></div>
     <div class="CartContent_bottom"></div>
-    <!--空购物车-->
-    <div class="cart_message">
-        <ul>
-            <li>购物车内暂时没有商品，<a href="../login/login.html">登录</a>后，将显示您之前加入的商品</li>
-            <li>去<a href="../index/index.html">首页</a>挑选喜欢的商品</li>
-        </ul>
-    </div>
-    <!--有商品时购物车-->
-    <div class="cart_message1">
-        <div class="cart_message1_top">
-            <ul>
-                <li style="width: 415px;text-align: center;">选购的商品</li>
-                <li style="width: 125px;text-align: right;padding-right: 15px;">单价（元）</li>
-                <li style="width: 190px;text-align: center;">购买数量</li>
-                <li style="width: 115px;padding-left: 15px;">金额小计</li>
-                <li style="width: 120px;text-align: center;">操作</li>
-            </ul>
-        </div>
 
-        {% for cat in carts %}
-            <div class="cart_message1_content">
-                <ul class="cart_message1_contentUl">
-                    <li class="cart_message1_content_li1">
-                        <img src="/static/img/{{ cat.goods.g_img }}">
-                        <a href="../goods/goods.html" class="names">
-                            {{ cat.goods.g_name }}
-                            <em>[特价]</em>
-                        </a>
-                    </li>
-                    <li class="cart_message1_content_li2">￥{{ cat.goods.g_price }}</li>
-                    <li class="cart_message1_content_li3">
-                        <input type="text" value="{{ cat.c_number }}" class="">
-                    </li>
-                    <i class="minus" cartsid="{{ cat.id }}">-</i>
-                    <i class="add" cartsid="{{ cat.id }}">+</i>
-                    <li class="cart_message1_content_li4">￥00</li>
-                    <li class="cart_message1_content_li5" cartsid="{{ cat.id }}">
-                        <a href="">加入收藏夹</a>
-                        <br><a>删除</a></li>
+    {% if user %}
+        <!--有商品时购物车-->
+        <div class="cart_message1">
+            <div class="cart_message1_top">
+                <ul>
+                    <li style="width: 415px;text-align: center;">选购的商品</li>
+                    <li style="width: 125px;text-align: right;padding-right: 15px;">单价（元）</li>
+                    <li style="width: 190px;text-align: center;">购买数量</li>
+                    <li style="width: 115px;padding-left: 15px;">金额小计</li>
+                    <li style="width: 120px;text-align: center;">操作</li>
                 </ul>
             </div>
-        {% endfor %}
+
+            {% for cat in carts %}
+                <div class="cart_message1_content">
+                    <ul class="cart_message1_contentUl">
+                        <li class="cart_message1_content_li1">
+                            <img src="/static/img/{{ cat.goods.g_img }}">
+                            <a href="../goods/goods.html" class="names">
+                                {{ cat.goods.g_name }}
+                                <em>[特价]</em>
+                            </a>
+                        </li>
+                        <li class="cart_message1_content_li2">￥{{ cat.goods.g_price }}</li>
+                        <li class="cart_message1_content_li3">
+                            <input type="text" value="{{ cat.c_number }}" class="">
+                        </li>
+                        <i class="minus" cartsid="{{ cat.id }}">-</i>
+                        <i class="add" cartsid="{{ cat.id }}">+</i>
+                        <li class="cart_message1_content_li4">￥00</li>
+                        <li class="cart_message1_content_li5" cartsid="{{ cat.id }}">
+{#                            <a href="">加入收藏夹</a>#}
+                            <br><a>删除</a></li>
+                    </ul>
+                </div>
+            {% endfor %}
 
 
-        <div class="cart_message1_bottom">
-            <a href="{% url 'app:index' %}"><button>继续购物</button></a>
-            <div>
-                <p>
-                    <em>{{ carts.count }}</em>
-                    件商品 总计金额：
-                    <span id="totals">
+            <div class="cart_message1_bottom">
+                <a href="{% url 'app:index' %}">
+                    <button>继续购物</button>
+                </a>
+                <div>
+                    <p>
+                        <em>{{ carts.count }}</em>
+                        件商品 总计金额：
+                        <span id="totals">
                         ￥00.00
                     </span></p>
+                </div>
+            </div>
+            <div class="end">
+                <ul>
+                    <li>应付商品金额（不含运费）：<em>￥00.00</em></li>
+                    <a href="{% url 'app:createorders' %}">
+                        <li>下单</li>
+                    </a>
+                </ul>
             </div>
         </div>
-        <div class="end">
+    {% else %}
+        <!--空购物车-->
+        <div class="cart_message">
             <ul>
-                <li>应付商品金额（不含运费）：<em>￥00.00</em></li>
-                <a href="{% url 'app:createorders' %}"><li>下单</li></a>
+                <li>您还未登录购物车内暂时没有商品，<a href="{% url 'app:login' %}">登录</a>后，将显示您之前加入的商品//还未注册？<a href="{% url 'app:register' %}">去注册</a></li>
+                <li>去<a href="{% url 'app:index' %}">首页</a>挑选喜欢的商品</li>
             </ul>
         </div>
-    </div>
+
+    {% endif %}
+
     <!--陈列商品-->
     <div class="sp_scclearfid">
         <div class="sc_top">猜你喜欢的商品</div>

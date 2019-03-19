@@ -159,7 +159,6 @@ $(function(){
 				url:"json/floor_liquor.json",
 				data:{},
 				success:function(data){
-				console.log("请求成功"+ data[indexs][index].id);
 				},
 			})
 		})
@@ -214,7 +213,6 @@ $(function(){
 				url:"json/red_wine.json",
 				data:{},
 				success:function(data){
-				console.log("请求成功"+ data[indexs1][index].id);
 				}
 			})
 		})
@@ -262,7 +260,6 @@ $(function(){
 				url:"json/floor_liquor.json",
 				data:{},
 				success:function(data){
-				console.log("请求成功"+ data[indexs2][index].id);
 				}
 			})
 		})
@@ -310,7 +307,6 @@ $(function(){
 				url:"json/red_wine.json",
 				data:{},
 				success:function(data){
-				console.log("请求成功"+ data[indexs3][index].id);
 				}
 			})
 		})

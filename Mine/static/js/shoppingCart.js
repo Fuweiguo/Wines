@@ -28,7 +28,6 @@ $(function () {
         }
         if ($num <= 1) {
             $.get(/minus_carts_goods/, reques_data, function (response_data) {
-                console.log(response_data)
                 $($this).parent().parent().remove()
                 total()
                 $('.cart_message1_bottom > div em').html(response_data.counts)
@@ -41,7 +40,6 @@ $(function () {
 
         } else {
             $.get(/minus_carts_goods/, reques_data, function (response_data) {
-                console.log(response_data)
                 $($this).prev().children().val(response_data.num)
                 total()
                 $('.cart_message1_bottom > div em').html(response_data.counts)
@@ -58,7 +56,6 @@ $(function () {
             'cartsid': $cartsid
         }
         $.get('/add_carts_goods/', reques_data, function (response_data) {
-            console.log(response_data)
             $($this).prev().prev().children().val(response_data.num)
             total()
             $('.cart_message1_bottom > div em').html(response_data.counts)
@@ -74,7 +71,6 @@ $(function () {
             'cartsid': $cartsid
         }
         $.get('/remove_carts_goods/', reques_data, function (response_data) {
-            console.log(response_data)
             if (response_data.counts == 0 || response_data.counts == '0') {
                 $($this).parent().parent().hide()
                 total()

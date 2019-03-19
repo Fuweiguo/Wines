@@ -12,7 +12,11 @@ urlpatterns = [
 
     #验证功能
     url(r'^code/$',views.code,name='code'),
-    #验证是否已被注册
+
+    #刷新验证码
+    url(r'^update_data/$',views.update_code,name='update_code'),
+
+    #验证号码是否已被注册
     url(r'^is_register/$',views.is_register,name='is_register'),
 
     # 退出

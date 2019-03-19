@@ -254,7 +254,7 @@ h1{
 	padding-left: 341px;
 	background: url(../img/cart-no-bg.png) no-repeat 250px 22px #F4F4F4;
 	/*display: block;*/
-	display: none;
+	/*display: none;*/
 }
 .cart_message ul{
 	width: 675px;

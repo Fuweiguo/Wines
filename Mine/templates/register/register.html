@@ -30,15 +30,15 @@
         <div class="header_bottom_left"><a href=""></a></div>
         <div class="header_bottom_right">
             <h1></h1>
-            <p>我已经注册，马上 <a href="../login/login.html">登录&gt;&gt;</a></p>
+            <p>我已经注册，马上 <a href="{% url 'app:login' %}">登录&gt;&gt;</a></p>
             <form action="{% url 'app:register' %}" method="post" name="ssssss">
-                <i style="color: red">用户名不规范</i>
-                <input type="text" placeholder="请输入用户名" class="inp1 isregise" name="name" id="name" isrester="false"/>
+                <i style="color: red">昵称不规范</i>
+                <input type="text" placeholder="请输入昵称" class="inp1 isregise" name="name" id="name" isrester="false"/>
                 <i style="color: red">请输入正确的手机号</i>
                 <input type="text" placeholder="请输入手机号" class="inp1 isregise" name="phone" id="phone"/>
                 <i style="color: red">验证码错误</i>
                 <input type="text" placeholder="请输入验证码" class="inp2 isregise" name="seccode" id="code"/>
-                <button class="identifyingCode"><img src="{% url 'app:verifyconde' %}" alt=""></button>
+                <div class="identifyingCode"><img src="{% url 'app:verifyconde' %}" alt=""></div>
 
                 <span class="invisibility">看不清？换一张</span>
                 <i style="color: red">密码不规范</i>

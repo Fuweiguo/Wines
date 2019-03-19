@@ -26,8 +26,17 @@
                 <ul>
                     <li><a href="#">中国酒业</a></li>
                     <li>Hi,欢迎来到中酒</li>
-                    <li class="h_c_t_leftUl1"><a href="../login/login.html">请登录</a></li>
-                    <li class="h_c_t_leftUl2"><a href="../register/register.html" style="color: darkred;">注册</a></li>
+{#                    <li class="h_c_t_leftUl1"><a href="../login/login.html">请登录</a></li>#}
+{#                    <li class="h_c_t_leftUl2"><a href="../register/register.html" style="color: darkred;">注册</a></li>#}
+                    {% if user %}
+                <li><img src="/static/img/icon_index_02.jpg" alt=""><a href="#">{{ user.name }}</a></li>
+                <li><a href="{% url 'app:logout' %}">退出登录</a></li>
+            {% else %}
+                <li class="h_c_t_leftUl1" url="{% url 'app:login' %}"><a href="{% url 'app:login' %}">请登录</a>
+                </li>
+                <li class="h_c_t_leftUl2" url="{% url 'app:register' %}"><a href="{% url 'app:register' %}"
+                                                                            style="color: darkred;">注册</a></li>
+            {% endif %}
                 </ul>
             </div>
             <div class="h_c_n_right">
@@ -72,7 +81,7 @@
                 <a href="{% url 'app:carts' %}">
                     <p>我的购物车</p>
                     <img src="{% static 'img/icon_index_05.jpg' %}">
-                    <div class="num">0</div>
+                    <div class="num "><i class="carts_num">{{ carts_num }}</i></div>
                 </a>
             </div>
             <div class="number"><img src="{% static 'img/icon_index_06.jpg' %}">购物车中还没有商品，赶紧选购吧！</div>
